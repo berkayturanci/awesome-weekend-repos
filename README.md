@@ -7,6 +7,8 @@ Curated and posted by [@weekendrepos](https://youtube.com/@weekendrepos) on
 YouTube, Instagram, and TikTok. This list is generated straight from the
 same source the videos are built from, so it never drifts.
 
+**[Browse the gallery →](https://berkayturanci.github.io/awesome-weekend-repos/)**
+
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
 | [caddyserver/caddy](https://github.com/caddyserver/caddy) | 74k | Go | Apache-2.0 | Automatic HTTPS — certificates, renewals, and config, all handled | [▶ YouTube](https://youtube.com/shorts/YS_6BqGJ98A) · [Instagram](https://www.instagram.com/weekendrepos/reel/Davp-khyril/) |

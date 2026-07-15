@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Awesome Weekend Repos</title>
+<meta name="description" content="One open-source repo a weekend, explained in under a minute. Curated by @weekendrepos." />
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0b0b0d;
+    color: #f2f2f4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  header {
+    padding: 48px 24px 24px;
+    text-align: center;
+  }
+  header h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 4vw, 2.4rem); }
+  header p { margin: 0 auto; max-width: 560px; color: #a0a0a8; line-height: 1.5; }
+  header a { color: #8ab4ff; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+    padding: 24px;
+    max-width: 1100px;
+    margin: 0 auto 64px;
+  }
+  .card {
+    all: unset;
+    cursor: pointer;
+    position: relative;
+    aspect-ratio: 9 / 16;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #1a1a1e;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .card:hover, .card:focus-visible { transform: translateY(-4px); border-color: rgba(255,255,255,0.25); }
+  .card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card-fallback {
+    width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+    padding: 12px; text-align: center; font-size: 0.85rem; color: #a0a0a8;
+  }
+  .card-caption {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 10px 10px 8px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0));
+    display: flex; justify-content: space-between; align-items: baseline; gap: 6px;
+  }
+  .card-name { font-size: 0.78rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .card-stars { font-size: 0.72rem; color: #f5c451; flex-shrink: 0; }
+
+  /* --- liquid-glass modal --- */
+  .overlay {
+    position: fixed; inset: 0;
+    background: rgba(8, 8, 10, 0.55);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 50;
+  }
+  .overlay.open { opacity: 1; pointer-events: auto; }
+  .dialog {
+    width: min(760px, 100%);
+    max-height: 85vh;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 220px) 1fr;
+    gap: 24px;
+    background: rgba(28, 28, 32, 0.55);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    transform: translateY(12px) scale(0.98);
+    transition: transform 0.2s ease;
+  }
+  .overlay.open .dialog { transform: translateY(0) scale(1); }
+  .dialog img {
+    width: 100%; border-radius: 16px; aspect-ratio: 9/16; object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .dialog-body h2 { margin: 0 0 4px; font-size: 1.3rem; }
+  .dialog-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 16px; }
+  .pill {
+    font-size: 0.75rem; padding: 4px 10px; border-radius: 999px;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.12);
+  }
+  .dialog-promise { color: #c8c8ce; line-height: 1.55; margin: 0 0 20px; }
+  .dialog-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .dialog-links a {
+    text-decoration: none; color: #f2f2f4;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 9px 16px; border-radius: 12px; font-size: 0.85rem;
+    transition: background 0.15s ease;
+  }
+  .dialog-links a:hover { background: rgba(255,255,255,0.18); }
+  .close-btn {
+    all: unset; cursor: pointer;
+    position: absolute; top: 16px; right: 16px;
+    width: 32px; height: 32px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(255,255,255,0.1); font-size: 1rem;
+  }
+  @media (max-width: 520px) {
+    .dialog { grid-template-columns: 1fr; }
+    .dialog img { max-height: 260px; }
+  }
+  footer { text-align: center; padding: 24px; color: #6f6f76; font-size: 0.85rem; }
+  footer a { color: #8ab4ff; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Awesome Weekend Repos</h1>
+    <p>One open-source repo a weekend, explained in under a minute — curated by
+      <a href="https://youtube.com/@weekendrepos">@weekendrepos</a>. Tap a repo for the review + links.</p>
+  </header>
+
+  <main class="grid" id="grid">
+
+      <button class="card" data-index="0" aria-haspopup="dialog">
+        <img src="assets/thumbs/caddy.png" alt="caddyserver/caddy" loading="lazy" />
+        <div class="card-caption">
+          <span class="card-name">caddyserver/caddy</span>
+          <span class="card-stars">★ 74k</span>
+        </div>
+      </button>
+
+      <button class="card" data-index="1" aria-haspopup="dialog">
+        <img src="assets/thumbs/coolify.png" alt="coollabsio/coolify" loading="lazy" />
+        <div class="card-caption">
+          <span class="card-name">coollabsio/coolify</span>
+          <span class="card-stars">★ 58.5k</span>
+        </div>
+      </button>
+
+      <button class="card" data-index="2" aria-haspopup="dialog">
+        <img src="assets/thumbs/ollama.png" alt="ollama/ollama" loading="lazy" />
+        <div class="card-caption">
+          <span class="card-name">ollama/ollama</span>
+          <span class="card-stars">★ 176k</span>
+        </div>
+      </button>
+  </main>
+
+  <div class="overlay" id="overlay" role="presentation">
+    <div class="dialog" role="dialog" aria-modal="true" id="dialog">
+      <button class="close-btn" id="closeBtn" aria-label="Close">✕</button>
+      <img id="dialogImg" src="" alt="" />
+      <div class="dialog-body">
+        <h2 id="dialogName"></h2>
+        <div class="dialog-meta" id="dialogMeta"></div>
+        <p class="dialog-promise" id="dialogPromise"></p>
+        <div class="dialog-links" id="dialogLinks"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated from the same catalog the videos are built from — never drifts.
+    <br />Suggest a repo by <a href="https://github.com/berkayturanci/awesome-weekend-repos/issues/new">opening an issue</a>.
+  </footer>
+
+<script>
+  const REPOS = [{"slug":"caddy","title":"Caddy: The Web Server That Does HTTPS For You","fullName":"caddyserver/caddy","url":"https://github.com/caddyserver/caddy","license":"Apache-2.0","stars":"74k","language":"Go","promise":"Automatic HTTPS — certificates, renewals, and config, all handled","youtube":"https://youtube.com/shorts/YS_6BqGJ98A","instagram":"https://www.instagram.com/weekendrepos/reel/Davp-khyril/","tiktok":null,"thumb":"assets/thumbs/caddy.png"},{"slug":"coolify","title":"Coolify: Run Your Own Vercel, Free","fullName":"coollabsio/coolify","url":"https://github.com/coollabsio/coolify","license":"Apache 2.0","stars":"58.5k","language":"PHP","promise":"Deploy apps, databases, and services to your own server — free forever","youtube":"https://youtube.com/shorts/HnKgqFbTung","instagram":"https://www.instagram.com/p/Da0avZIyBQu/","tiktok":null,"thumb":"assets/thumbs/coolify.png"},{"slug":"ollama","title":"Ollama: Run Any AI Model on Your Own Machine","fullName":"ollama/ollama","url":"https://github.com/ollama/ollama","license":"MIT","stars":"176k","language":"Go","promise":"One command to run open LLMs locally — no cloud, no API keys","youtube":"https://youtube.com/shorts/2-ZYlmG3_pA","instagram":"https://www.instagram.com/p/Dax1GyUyOfx/","tiktok":null,"thumb":"assets/thumbs/ollama.png"}];
+  const overlay = document.getElementById("overlay");
+  const dialogImg = document.getElementById("dialogImg");
+  const dialogName = document.getElementById("dialogName");
+  const dialogMeta = document.getElementById("dialogMeta");
+  const dialogPromise = document.getElementById("dialogPromise");
+  const dialogLinks = document.getElementById("dialogLinks");
+
+  function openCard(r) {
+    dialogImg.src = r.thumb || "";
+    dialogImg.alt = r.fullName;
+    dialogName.textContent = r.fullName;
+    dialogMeta.innerHTML = [
+      r.stars ? `<span class="pill">★ ${r.stars}</span>` : "",
+      r.language ? `<span class="pill">${r.language}</span>` : "",
+      r.license ? `<span class="pill">${r.license}</span>` : "",
+    ].join("");
+    dialogPromise.textContent = r.promise;
+    const links = [];
+    if (r.youtube) links.push(`<a href="${r.youtube}" target="_blank" rel="noopener">▶ YouTube</a>`);
+    if (r.instagram) links.push(`<a href="${r.instagram}" target="_blank" rel="noopener">Instagram</a>`);
+    if (r.tiktok) links.push(`<a href="${r.tiktok}" target="_blank" rel="noopener">TikTok</a>`);
+    links.push(`<a href="${r.url}" target="_blank" rel="noopener">GitHub ↗</a>`);
+    dialogLinks.innerHTML = links.join("");
+    overlay.classList.add("open");
+  }
+
+  function closeDialog() { overlay.classList.remove("open"); }
+
+  document.getElementById("grid").addEventListener("click", (e) => {
+    const card = e.target.closest(".card");
+    if (!card) return;
+    openCard(REPOS[Number(card.dataset.index)]);
+  });
+  document.getElementById("closeBtn").addEventListener("click", closeDialog);
+  overlay.addEventListener("click", (e) => { if (e.target === overlay) closeDialog(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDialog(); });
+</script>
+</body>
+</html>
