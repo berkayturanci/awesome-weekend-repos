@@ -1,0 +1,12 @@
+name: Report a problem
+description: A broken link, stale star count, or something wrong on the site
+title: "Fix: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong?
+      placeholder: e.g. the Instagram link for caddy 404s
+    validations:
+      required: true

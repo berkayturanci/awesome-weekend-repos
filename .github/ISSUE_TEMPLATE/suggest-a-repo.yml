@@ -1,0 +1,30 @@
+name: Suggest a repo
+description: Suggest an open-source repo for a future Weekend Repos video
+title: "Suggest: "
+labels: ["suggestion"]
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: Repo
+      description: Link to the GitHub repo
+      placeholder: https://github.com/owner/name
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does it solve?
+      description: One sentence — no essay required
+      placeholder: "It does X so you don't have to Y"
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: It has an OSI-approved license
+          required: true
+        - label: It's actively maintained (a commit in the last few months)
+          required: true
