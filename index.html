@@ -21,6 +21,16 @@
   header h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 4vw, 2.4rem); }
   header p { margin: 0 auto; max-width: 560px; color: #a0a0a8; line-height: 1.5; }
   header a { color: #8ab4ff; }
+  .search-wrap { max-width: 360px; margin: 24px auto 0; padding: 0 24px; }
+  .search-wrap input {
+    width: 100%; padding: 11px 16px; border-radius: 12px;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+    color: #f2f2f4; font-size: 0.9rem; outline: none;
+  }
+  .search-wrap input::placeholder { color: #7a7a82; }
+  .search-wrap input:focus { border-color: rgba(255,255,255,0.3); }
+  .empty-state { text-align: center; color: #7a7a82; padding: 40px 24px; display: none; }
+  .card.hidden { display: none; }
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -126,17 +136,13 @@
       <a href="https://youtube.com/@weekendrepos">@weekendrepos</a>. Tap a repo for the review + links.</p>
   </header>
 
+  <div class="search-wrap">
+    <input type="search" id="search" placeholder="Search by name or language…" aria-label="Search repos" />
+  </div>
+
   <main class="grid" id="grid">
 
       <button class="card" data-index="0" aria-haspopup="dialog">
-        <img src="assets/thumbs/caddy.png" alt="caddyserver/caddy" loading="lazy" />
-        <div class="card-caption">
-          <span class="card-name">caddyserver/caddy</span>
-          <span class="card-stars">★ 74k</span>
-        </div>
-      </button>
-
-      <button class="card" data-index="1" aria-haspopup="dialog">
         <img src="assets/thumbs/coolify.png" alt="coollabsio/coolify" loading="lazy" />
         <div class="card-caption">
           <span class="card-name">coollabsio/coolify</span>
@@ -144,14 +150,23 @@
         </div>
       </button>
 
-      <button class="card" data-index="2" aria-haspopup="dialog">
+      <button class="card" data-index="1" aria-haspopup="dialog">
         <img src="assets/thumbs/ollama.png" alt="ollama/ollama" loading="lazy" />
         <div class="card-caption">
           <span class="card-name">ollama/ollama</span>
           <span class="card-stars">★ 176k</span>
         </div>
       </button>
+
+      <button class="card" data-index="2" aria-haspopup="dialog">
+        <img src="assets/thumbs/caddy.png" alt="caddyserver/caddy" loading="lazy" />
+        <div class="card-caption">
+          <span class="card-name">caddyserver/caddy</span>
+          <span class="card-stars">★ 74k</span>
+        </div>
+      </button>
   </main>
+  <p class="empty-state" id="emptyState">No repos match that search.</p>
 
   <div class="overlay" id="overlay" role="presentation">
     <div class="dialog" role="dialog" aria-modal="true" id="dialog">
@@ -172,7 +187,7 @@
   </footer>
 
 <script>
-  const REPOS = [{"slug":"caddy","title":"Caddy: The Web Server That Does HTTPS For You","fullName":"caddyserver/caddy","url":"https://github.com/caddyserver/caddy","license":"Apache-2.0","stars":"74k","language":"Go","promise":"Automatic HTTPS — certificates, renewals, and config, all handled","youtube":"https://youtube.com/shorts/YS_6BqGJ98A","instagram":"https://www.instagram.com/weekendrepos/reel/Davp-khyril/","tiktok":null,"thumb":"assets/thumbs/caddy.png"},{"slug":"coolify","title":"Coolify: Run Your Own Vercel, Free","fullName":"coollabsio/coolify","url":"https://github.com/coollabsio/coolify","license":"Apache 2.0","stars":"58.5k","language":"PHP","promise":"Deploy apps, databases, and services to your own server — free forever","youtube":"https://youtube.com/shorts/HnKgqFbTung","instagram":"https://www.instagram.com/p/Da0avZIyBQu/","tiktok":null,"thumb":"assets/thumbs/coolify.png"},{"slug":"ollama","title":"Ollama: Run Any AI Model on Your Own Machine","fullName":"ollama/ollama","url":"https://github.com/ollama/ollama","license":"MIT","stars":"176k","language":"Go","promise":"One command to run open LLMs locally — no cloud, no API keys","youtube":"https://youtube.com/shorts/2-ZYlmG3_pA","instagram":"https://www.instagram.com/p/Dax1GyUyOfx/","tiktok":null,"thumb":"assets/thumbs/ollama.png"}];
+  const REPOS = [{"slug":"coolify","title":"Coolify: Run Your Own Vercel, Free","fullName":"coollabsio/coolify","url":"https://github.com/coollabsio/coolify","license":"Apache 2.0","stars":"58.5k","language":"PHP","promise":"Deploy apps, databases, and services to your own server — free forever","youtube":"https://youtube.com/shorts/HnKgqFbTung","instagram":"https://www.instagram.com/p/Da0avZIyBQu/","tiktok":null,"thumb":"assets/thumbs/coolify.png"},{"slug":"ollama","title":"Ollama: Run Any AI Model on Your Own Machine","fullName":"ollama/ollama","url":"https://github.com/ollama/ollama","license":"MIT","stars":"176k","language":"Go","promise":"One command to run open LLMs locally — no cloud, no API keys","youtube":"https://youtube.com/shorts/2-ZYlmG3_pA","instagram":"https://www.instagram.com/p/Dax1GyUyOfx/","tiktok":null,"thumb":"assets/thumbs/ollama.png"},{"slug":"caddy","title":"Caddy: The Web Server That Does HTTPS For You","fullName":"caddyserver/caddy","url":"https://github.com/caddyserver/caddy","license":"Apache-2.0","stars":"74k","language":"Go","promise":"Automatic HTTPS — certificates, renewals, and config, all handled","youtube":"https://youtube.com/shorts/YS_6BqGJ98A","instagram":"https://www.instagram.com/weekendrepos/reel/Davp-khyril/","tiktok":null,"thumb":"assets/thumbs/caddy.png"}];
   const overlay = document.getElementById("overlay");
   const dialogImg = document.getElementById("dialogImg");
   const dialogName = document.getElementById("dialogName");
@@ -209,6 +224,21 @@
   document.getElementById("closeBtn").addEventListener("click", closeDialog);
   overlay.addEventListener("click", (e) => { if (e.target === overlay) closeDialog(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDialog(); });
+
+  const searchInput = document.getElementById("search");
+  const emptyState = document.getElementById("emptyState");
+  const cards = Array.from(document.querySelectorAll(".card"));
+  searchInput.addEventListener("input", () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visible = 0;
+    cards.forEach((card, i) => {
+      const r = REPOS[i];
+      const match = !q || [r.fullName, r.language, r.promise].join(" ").toLowerCase().includes(q);
+      card.classList.toggle("hidden", !match);
+      if (match) visible++;
+    });
+    emptyState.style.display = visible ? "none" : "block";
+  });
 </script>
 </body>
 </html>
