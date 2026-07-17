@@ -16,6 +16,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
+| [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) | 66k | Rust | MIT / Unlicense | A code search tool that skips the junk and just finishes | [▶ YouTube](https://youtube.com/shorts/oTEUo-owv3Y) · [Instagram](https://www.instagram.com/p/Da4zaHqSl7_/) |
 | [pocketbase/pocketbase](https://github.com/pocketbase/pocketbase) | 60k | Go | MIT | Database, auth, file storage, and an admin UI in a single binary | [▶ YouTube](https://youtube.com/shorts/t2ZdpKXFYQk) · [Instagram](https://www.instagram.com/p/Da2l-biS59i/) |
 | [coollabsio/coolify](https://github.com/coollabsio/coolify) | 58.5k | PHP | Apache 2.0 | Deploy apps, databases, and services to your own server — free forever | [▶ YouTube](https://youtube.com/shorts/HnKgqFbTung) · [Instagram](https://www.instagram.com/p/Da0avZIyBQu/) |
 | [ollama/ollama](https://github.com/ollama/ollama) | 176k | Go | MIT | One command to run open LLMs locally — no cloud, no API keys | [▶ YouTube](https://youtube.com/shorts/2-ZYlmG3_pA) · [Instagram](https://www.instagram.com/p/Dax1GyUyOfx/) |
