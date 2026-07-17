@@ -1,0 +1,4 @@
+{
+  "cloudflareToken": "f9a978b9ccc64ff49460fbcee8f722ef",
+  "_note": "Public Cloudflare Web Analytics beacon id for berkayturanci.github.io (appears in page source; not a secret). Read by scripts/awesome-list.ts to inject the beacon."
+}
