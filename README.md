@@ -16,6 +16,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
+| [nektos/act](https://github.com/nektos/act) | 71.2k | Go | MIT | Test your CI without pushing — Docker containers, locally | [▶ YouTube](https://youtube.com/shorts/R6yNrU9o6x4) · [Instagram](https://www.instagram.com/p/DbXlw6zSCVZ/) |
 | [diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute) | 30.6k |  | MIT | A free local AI gateway routing across 290+ providers, no quota wall | [▶ YouTube](https://youtube.com/shorts/3bB84HtWQ4o) · [Instagram](https://www.instagram.com/p/DbVAx_sS7nv/) |
 | [tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) | 26.5k |  | MIT | A local code graph that gives AI agents only the files that changed | [▶ YouTube](https://youtube.com/shorts/olemkIjZz7w) · [Instagram](https://www.instagram.com/p/DbSabZHSPjA/) |
 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 219.8k | Python | MIT | An open-source coding agent that builds its own skills over time | [▶ YouTube](https://youtube.com/shorts/R7nQ0a7r0bw) · [Instagram](https://www.instagram.com/p/DbQL95xSXBZ/) |
