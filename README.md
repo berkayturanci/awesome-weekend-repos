@@ -16,6 +16,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
+| [drumih/turbo-fieldfare](https://github.com/drumih/turbo-fieldfare) | 2.3k | Swift | Apache-2.0 | A Swift + Metal runtime running a 26B model on any Apple Silicon Mac | [▶ YouTube](https://youtube.com/shorts/TfqX1cp7duY) · [Instagram](https://www.instagram.com/p/Dbdg87MSJUR/) |
 | [koala73/worldmonitor](https://github.com/koala73/worldmonitor) | 76.1k |  | AGPL-3.0 | A free, open-source situational-awareness map watching the world live | [▶ YouTube](https://www.youtube.com/shorts/hYDvdvM_Z4M) · [Instagram](https://www.instagram.com/p/DbakZXWyMj_/) |
 | [nektos/act](https://github.com/nektos/act) | 71.2k | Go | MIT | Test your CI without pushing — Docker containers, locally | [▶ YouTube](https://youtube.com/shorts/R6yNrU9o6x4) · [Instagram](https://www.instagram.com/p/DbXlw6zSCVZ/) |
 | [diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute) | 30.6k |  | MIT | A free local AI gateway routing across 290+ providers, no quota wall | [▶ YouTube](https://youtube.com/shorts/3bB84HtWQ4o) · [Instagram](https://www.instagram.com/p/DbVAx_sS7nv/) |
