@@ -34,14 +34,37 @@
     color: #f2f2f4;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
+  /* Soft ambient glow that drifts toward the cursor — purely decorative,
+     z-index:-1 keeps it painted behind every normal-flow element. Only
+     driven by JS on hover-capable pointers; static elsewhere. */
+  .bg-glow {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    --mx: 50%;
+    --my: 26%;
+    background:
+      radial-gradient(640px circle at var(--mx) var(--my), rgba(91, 140, 255, 0.16), transparent 60%),
+      radial-gradient(480px circle at calc(100% - var(--mx)) calc(100% - var(--my)), rgba(91, 140, 255, 0.07), transparent 65%);
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
   header {
     padding: 48px 24px 24px;
+    position: relative;
     text-align: center;
+    animation: fadeInUp 0.7s cubic-bezier(0.16,1,0.3,1) both;
   }
   header h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 4vw, 2.4rem); }
   header p { margin: 0 auto; max-width: 560px; color: #a0a0a8; line-height: 1.5; }
   header a { color: #8ab4ff; }
-  .search-wrap { max-width: 360px; margin: 24px auto 0; padding: 0 24px; }
+  .search-wrap {
+    max-width: 360px; margin: 24px auto 0; padding: 0 24px;
+    animation: fadeInUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s both;
+  }
   .search-wrap input {
     width: 100%; padding: 11px 16px; border-radius: 12px;
     background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
@@ -49,7 +72,26 @@
   }
   .search-wrap input::placeholder { color: #7a7a82; }
   .search-wrap input:focus { border-color: rgba(255,255,255,0.3); }
+  .filter-bar {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+    max-width: 900px; margin: 16px auto 0; padding: 0 24px;
+    animation: fadeInUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.18s both;
+  }
+  .chip {
+    all: unset; cursor: pointer; box-sizing: border-box;
+    font-size: 0.78rem; padding: 6px 14px; border-radius: 999px;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    color: #c8c8ce; transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+  .chip:hover { background: rgba(255,255,255,0.12); color: #f2f2f4; }
+  .chip:focus-visible { outline: 2px solid rgba(138,180,255,0.6); outline-offset: 2px; }
+  .chip.active { background: rgba(91,140,255,0.18); border-color: rgba(91,140,255,0.55); color: #cddcff; }
+  .result-count { text-align: center; color: #6f6f76; font-size: 0.78rem; margin: 14px 0 -4px; }
   .empty-state { text-align: center; color: #7a7a82; padding: 40px 24px; display: none; }
+  .empty-state button {
+    all: unset; cursor: pointer; margin-top: 10px; display: inline-block;
+    color: #8ab4ff; font-size: 0.85rem; text-decoration: underline;
+  }
   .card.hidden { display: none; }
   .grid {
     display: grid;
@@ -68,14 +110,30 @@
     overflow: hidden;
     background: #1a1a1e;
     border: 1px solid rgba(255,255,255,0.08);
-    transition: transform 0.15s ease, border-color 0.15s ease;
+    opacity: 0;
+    transform: translateY(28px);
+    transition: transform 0.6s cubic-bezier(0.16,1,0.3,1), opacity 0.6s cubic-bezier(0.16,1,0.3,1), border-color 0.15s ease;
   }
-  .card:hover, .card:focus-visible { transform: translateY(-4px); border-color: rgba(255,255,255,0.25); }
+  .card.in-view { opacity: 1; transform: translateY(0); }
+  .card.tilting { transition: transform 0.08s ease-out, border-color 0.15s ease; }
+  .card:focus-visible { border-color: rgba(255,255,255,0.3); outline: 2px solid rgba(138,180,255,0.6); outline-offset: 2px; }
   .card img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .card-fallback {
     width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
     padding: 12px; text-align: center; font-size: 0.85rem; color: #a0a0a8;
   }
+  /* Cursor-tracked glare — sits above the thumbnail and caption (::after
+     paints last), only lit up while .tilting is toggled on by pointer JS. */
+  .card::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,0.35), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+  .card.tilting::after { opacity: 1; }
   .card-caption {
     position: absolute; left: 0; right: 0; bottom: 0;
     padding: 10px 10px 8px;
@@ -147,9 +205,23 @@
   }
   footer { text-align: center; padding: 24px; color: #6f6f76; font-size: 0.85rem; }
   footer a { color: #8ab4ff; }
+
+  /* Belt-and-suspenders: even if JS never runs, nobody who asked their OS
+     for less motion should be stuck staring at invisible (opacity:0) cards. */
+  @media (prefers-reduced-motion: reduce) {
+    .card { transition: none !important; opacity: 1 !important; transform: none !important; }
+    .bg-glow { display: none; }
+    header, .search-wrap, .filter-bar { animation: none !important; opacity: 1 !important; transform: none !important; }
+  }
 </style>
+<noscript>
+  <!-- .in-view is only ever added by JS — without it every card would stay
+       at opacity:0 forever. This is the only line load-bearing for that. -->
+  <style>.card { opacity: 1 !important; transform: none !important; }</style>
+</noscript>
 </head>
 <body>
+  <div class="bg-glow" id="bgGlow" aria-hidden="true"></div>
   <header>
     <h1>Awesome Weekend Repos</h1>
     <p>One open-source repo a weekend, explained in under a minute — curated by
@@ -159,6 +231,18 @@
   <div class="search-wrap">
     <input type="search" id="search" placeholder="Search by name or language…" aria-label="Search repos" />
   </div>
+
+  <div class="filter-bar" id="filterBar" role="group" aria-label="Filter by language">
+    <button class="chip active" data-lang="" aria-pressed="true">All (20)</button>
+    <button class="chip" data-lang="Go" aria-pressed="false">Go (6)</button>
+    <button class="chip" data-lang="TypeScript" aria-pressed="false">TypeScript (3)</button>
+    <button class="chip" data-lang="Python" aria-pressed="false">Python (2)</button>
+    <button class="chip" data-lang="Rust" aria-pressed="false">Rust (2)</button>
+    <button class="chip" data-lang="Swift" aria-pressed="false">Swift (1)</button>
+    <button class="chip" data-lang="JavaScript" aria-pressed="false">JavaScript (1)</button>
+    <button class="chip" data-lang="PHP" aria-pressed="false">PHP (1)</button>
+  </div>
+  <p class="result-count" id="resultCount"></p>
 
   <main class="grid" id="grid">
 
@@ -322,7 +406,7 @@
         </div>
       </button>
   </main>
-  <p class="empty-state" id="emptyState">No repos match that search.</p>
+  <p class="empty-state" id="emptyState">No repos match that filter.<br /><button id="clearFilters" type="button">Clear filters</button></p>
 
   <div class="overlay" id="overlay" role="presentation">
     <div class="dialog" role="dialog" aria-modal="true" id="dialog">
@@ -383,18 +467,125 @@
 
   const searchInput = document.getElementById("search");
   const emptyState = document.getElementById("emptyState");
+  const resultCount = document.getElementById("resultCount");
+  const clearFiltersBtn = document.getElementById("clearFilters");
   const cards = Array.from(document.querySelectorAll(".card"));
-  searchInput.addEventListener("input", () => {
+  const chips = Array.from(document.querySelectorAll(".chip"));
+
+  let activeLang = "";
+  function setActiveChip(lang) {
+    activeLang = lang;
+    chips.forEach((chip) => {
+      const on = (chip.dataset.lang || "") === lang;
+      chip.classList.toggle("active", on);
+      chip.setAttribute("aria-pressed", String(on));
+    });
+  }
+  // Keeps the active language filter in the URL hash — a filtered link is
+  // shareable/bookmarkable, and reloading keeps you where you were.
+  function syncHash() {
+    const hash = activeLang ? `#lang=${encodeURIComponent(activeLang)}` : "";
+    history.replaceState(null, "", location.pathname + location.search + hash);
+  }
+  function applyFilters() {
     const q = searchInput.value.trim().toLowerCase();
     let visible = 0;
     cards.forEach((card, i) => {
       const r = REPOS[i];
-      const match = !q || [r.fullName, r.language, r.promise].join(" ").toLowerCase().includes(q);
+      const matchesSearch = !q || [r.fullName, r.language, r.promise].join(" ").toLowerCase().includes(q);
+      const matchesLang = !activeLang || r.language === activeLang;
+      const match = matchesSearch && matchesLang;
       card.classList.toggle("hidden", !match);
       if (match) visible++;
     });
     emptyState.style.display = visible ? "none" : "block";
+    resultCount.textContent = visible && (q || activeLang) ? `Showing ${visible} of ${cards.length}` : "";
+  }
+  searchInput.addEventListener("input", applyFilters);
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      setActiveChip(chip.dataset.lang || "");
+      syncHash();
+      applyFilters();
+    });
   });
+  clearFiltersBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    setActiveChip("");
+    syncHash();
+    applyFilters();
+  });
+
+  // Restore a #lang=Go style link on load.
+  const hashLang = decodeURIComponent(location.hash.replace(/^#lang=/, ""));
+  if (hashLang && chips.some((c) => c.dataset.lang === hashLang)) {
+    setActiveChip(hashLang);
+  }
+  applyFilters();
+
+  // ---- motion: scroll-in reveal, cursor tilt + glare, ambient glow ----
+  // All gated on a real mouse (hover:hover + pointer:fine) and on the user
+  // not having asked their OS for reduced motion — most visitors here are
+  // on mobile (see channel analytics), so this never adds JS cost for them.
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  if (reduceMotion) {
+    cards.forEach((c) => c.classList.add("in-view"));
+  } else if ("IntersectionObserver" in window) {
+    let revealed = 0;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          el.style.transitionDelay = `${Math.min(revealed % 8, 7) * 55}ms`;
+          el.classList.add("in-view");
+          revealed++;
+          io.unobserve(el);
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -30px 0px" }
+    );
+    cards.forEach((c) => io.observe(c));
+  } else {
+    cards.forEach((c) => c.classList.add("in-view"));
+  }
+
+  if (canHover && !reduceMotion) {
+    const MAX_TILT = 10;
+    cards.forEach((card) => {
+      card.addEventListener("pointerenter", () => card.classList.add("tilting"));
+      card.addEventListener("pointermove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const px = (e.clientX - rect.left) / rect.width;
+        const py = (e.clientY - rect.top) / rect.height;
+        const rx = ((0.5 - py) * MAX_TILT).toFixed(2);
+        const ry = ((px - 0.5) * MAX_TILT).toFixed(2);
+        card.style.transform = `translateY(-6px) perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.03)`;
+        card.style.setProperty("--mx", `${px * 100}%`);
+        card.style.setProperty("--my", `${py * 100}%`);
+      });
+      card.addEventListener("pointerleave", () => {
+        card.classList.remove("tilting");
+        card.style.transform = "";
+      });
+    });
+
+    const glow = document.getElementById("bgGlow");
+    let raf = null;
+    let gx = 50, gy = 26;
+    document.addEventListener("pointermove", (e) => {
+      gx = (e.clientX / window.innerWidth) * 100;
+      gy = (e.clientY / window.innerHeight) * 100;
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        glow.style.setProperty("--mx", `${gx}%`);
+        glow.style.setProperty("--my", `${gy}%`);
+        raf = null;
+      });
+    });
+  }
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f9a978b9ccc64ff49460fbcee8f722ef"}'></script>
 </body>
