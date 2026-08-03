@@ -9,7 +9,7 @@ One open-source repo a weekend, explained in under a minute — the useful
 kind: solves one real problem, no PhD required to understand why it exists.
 
 Curated and posted by [@weekendrepos](https://youtube.com/@weekendrepos) on
-YouTube, Instagram, and TikTok. This list is generated straight from the
+YouTube and Instagram. This list is generated straight from the
 same source the videos are built from, so it never drifts.
 
 **[Browse the gallery →](https://berkayturanci.github.io/awesome-weekend-repos/)**

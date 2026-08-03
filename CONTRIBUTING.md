@@ -22,7 +22,7 @@ Not every suggestion becomes a video — but every good one gets a look.
 ## Found something wrong?
 
 A stale star count, a broken link, a repo that's since been archived —
-[open an issue](https://github.com/berkayturanci/awesome-weekend-repos/issues/new)
+[open an issue](https://github.com/berkayturanci/awesome-weekend-repos/issues/new?template=bug-report.yml)
 and it'll get fixed on the next regeneration.
 
 ## Why no direct PRs to README.md / index.html?

@@ -11,10 +11,18 @@ body:
       placeholder: https://github.com/owner/name
     validations:
       required: true
+  - type: input
+    id: stars
+    attributes:
+      label: Star count
+      description: Roughly how many stars does it have right now?
+      placeholder: "e.g. 1.2k"
+    validations:
+      required: true
   - type: textarea
     id: problem
     attributes:
-      label: What problem does it solve?
+      label: Why should we cover it?
       description: One sentence — no essay required
       placeholder: "It does X so you don't have to Y"
     validations:
