@@ -48,6 +48,35 @@
       radial-gradient(640px circle at var(--mx) var(--my), rgba(91, 140, 255, 0.16), transparent 60%),
       radial-gradient(480px circle at calc(100% - var(--mx)) calc(100% - var(--my)), rgba(91, 140, 255, 0.07), transparent 65%);
   }
+  /* A handful of pixel-sized lights drifting sideways across the whole
+     page — pure CSS, no cursor involved, so unlike .bg-glow this one
+     works identically on mobile. Positions/timing are hand-picked in
+     starsHtml below (not Math.random) so re-running the generator with
+     no other change produces byte-identical output — this footer's own
+     claim ("never drifts") would be a lie otherwise. */
+  .stars { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+  .star {
+    position: absolute;
+    width: var(--size, 2px); height: var(--size, 2px);
+    border-radius: 50%;
+    background: #dbe6ff;
+    box-shadow: 0 0 4px 1px rgba(219,230,255,0.8), 0 0 10px 2px rgba(91,140,255,0.4);
+    opacity: 0;
+  }
+  .star-ltr { left: -3%; animation: driftRight linear infinite; }
+  .star-rtl { right: -3%; animation: driftLeft linear infinite; }
+  @keyframes driftRight {
+    0% { transform: translateX(0); opacity: 0; }
+    10% { opacity: var(--peak, 0.6); }
+    90% { opacity: var(--peak, 0.6); }
+    100% { transform: translateX(106vw); opacity: 0; }
+  }
+  @keyframes driftLeft {
+    0% { transform: translateX(0); opacity: 0; }
+    10% { opacity: var(--peak, 0.6); }
+    90% { opacity: var(--peak, 0.6); }
+    100% { transform: translateX(-106vw); opacity: 0; }
+  }
   @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(14px); }
     to { opacity: 1; transform: translateY(0); }
@@ -210,7 +239,7 @@
      for less motion should be stuck staring at invisible (opacity:0) cards. */
   @media (prefers-reduced-motion: reduce) {
     .card { transition: none !important; opacity: 1 !important; transform: none !important; }
-    .bg-glow { display: none; }
+    .bg-glow, .stars { display: none; }
     header, .search-wrap, .filter-bar { animation: none !important; opacity: 1 !important; transform: none !important; }
   }
 </style>
@@ -222,6 +251,20 @@
 </head>
 <body>
   <div class="bg-glow" id="bgGlow" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true">
+    <div class="star star-ltr" style="top:7%; animation-duration:28s; animation-delay:0s; --size:1.5px; --peak:0.35;"></div>
+    <div class="star star-rtl" style="top:48%; animation-duration:39s; animation-delay:-17s; --size:2.2px; --peak:0.47;"></div>
+    <div class="star star-ltr" style="top:89%; animation-duration:50s; animation-delay:-34s; --size:2.9px; --peak:0.59;"></div>
+    <div class="star star-rtl" style="top:30%; animation-duration:37s; animation-delay:-14s; --size:1.5px; --peak:0.71;"></div>
+    <div class="star star-ltr" style="top:71%; animation-duration:48s; animation-delay:-20s; --size:2.2px; --peak:0.35;"></div>
+    <div class="star star-rtl" style="top:12%; animation-duration:35s; animation-delay:-15s; --size:2.9px; --peak:0.47;"></div>
+    <div class="star star-ltr" style="top:53%; animation-duration:46s; animation-delay:-10s; --size:1.5px; --peak:0.59;"></div>
+    <div class="star star-rtl" style="top:94%; animation-duration:33s; animation-delay:-20s; --size:2.2px; --peak:0.71;"></div>
+    <div class="star star-ltr" style="top:35%; animation-duration:44s; animation-delay:-4s; --size:2.9px; --peak:0.35;"></div>
+    <div class="star star-rtl" style="top:76%; animation-duration:31s; animation-delay:-29s; --size:1.5px; --peak:0.47;"></div>
+    <div class="star star-ltr" style="top:17%; animation-duration:42s; animation-delay:-2s; --size:2.2px; --peak:0.59;"></div>
+    <div class="star star-rtl" style="top:58%; animation-duration:29s; animation-delay:-13s; --size:2.9px; --peak:0.71;"></div>
+  </div>
   <header>
     <h1>Awesome Weekend Repos</h1>
     <p>One open-source repo a weekend, explained in under a minute — curated by
