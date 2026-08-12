@@ -16,7 +16,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
-| [Aider-AI/aider](https://github.com/Aider-AI/aider) | 48.1k | Python | Apache-2.0 | AI pair programming in your terminal, with git auto-commits. | [▶ YouTube](https://youtube.com/shorts/VXz2l-gEE0w) · [Instagram](https://www.instagram.com/p/DbtAAX_Shp-/) |
+| [Aider-AI/aider](https://github.com/Aider-AI/aider) | 48.2k | Python | Apache-2.0 | AI pair programming in your terminal, with git auto-commits. | [▶ YouTube](https://youtube.com/shorts/VXz2l-gEE0w) · [Instagram](https://www.instagram.com/p/DbtAAX_Shp-/) |
 | [lyogavin/airllm](https://github.com/lyogavin/airllm) | 30.9k | Python | Apache-2.0 | A free, open-source way to run 70B AI models on one small GPU | [▶ YouTube](https://youtube.com/shorts/bggvk7pHzSI) · [Instagram](https://www.instagram.com/p/Dbqb98tSNLj/) |
 | [hoppscotch/hoppscotch](https://github.com/hoppscotch/hoppscotch) | 80k | TypeScript | MIT | A free, self-hostable API client that never makes you log in | [▶ YouTube](https://youtube.com/shorts/qDLID3xEF1s) · [Instagram](https://www.instagram.com/p/Dblv7hyyO7v/) |
 | [berkayturanci/ai-jury](https://github.com/berkayturanci/ai-jury) | Gem 💎 | Python | MIT | A cross-vendor AI review jury that debates before it decides | [▶ YouTube](https://www.youtube.com/shorts/XqOl18QImYs) · [Instagram](https://www.instagram.com/p/DbfSbihS5zC/) |
