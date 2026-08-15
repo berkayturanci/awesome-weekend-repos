@@ -28,8 +28,10 @@
 <style>
   :root { color-scheme: dark; }
   * { box-sizing: border-box; }
-  body {
+  html, body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     background: #0b0b0d;
     color: #f2f2f4;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -54,7 +56,7 @@
      starsHtml below (not Math.random) so re-running the generator with
      no other change produces byte-identical output — this footer's own
      claim ("never drifts") would be a lie otherwise. */
-  .stars { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+  .stars { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; width: 100%; height: 100%; }
   .star {
     position: absolute;
     width: var(--size, 2px); height: var(--size, 2px);
@@ -63,28 +65,31 @@
     box-shadow: 0 0 4px 1px rgba(219,230,255,0.8), 0 0 10px 2px rgba(91,140,255,0.4);
     opacity: 0;
   }
-  .star-ltr { left: -3%; animation: driftRight linear infinite; }
-  .star-rtl { right: -3%; animation: driftLeft linear infinite; }
+  .star-ltr { left: 0; animation: driftRight linear infinite; }
+  .star-rtl { right: 0; animation: driftLeft linear infinite; }
   @keyframes driftRight {
     0% { transform: translateX(0); opacity: 0; }
     10% { opacity: var(--peak, 0.6); }
     90% { opacity: var(--peak, 0.6); }
-    100% { transform: translateX(106vw); opacity: 0; }
+    100% { transform: translateX(100vw); opacity: 0; }
   }
   @keyframes driftLeft {
     0% { transform: translateX(0); opacity: 0; }
     10% { opacity: var(--peak, 0.6); }
     90% { opacity: var(--peak, 0.6); }
-    100% { transform: translateX(-106vw); opacity: 0; }
+    100% { transform: translateX(-100vw); opacity: 0; }
   }
   @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(14px); }
     to { opacity: 1; transform: translateY(0); }
   }
   header {
-    padding: 48px 24px 24px;
+    padding: clamp(32px, 6vw, 48px) 16px 20px;
     position: relative;
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
     animation: fadeInUp 0.7s cubic-bezier(0.16,1,0.3,1) both;
   }
   .logo-mark {
@@ -98,28 +103,28 @@
   .logo-mark svg { width: 26px; height: 26px; }
   header h1 {
     margin: 0 0 10px;
-    font-size: clamp(1.7rem, 4.2vw, 2.5rem);
+    font-size: clamp(1.5rem, 5.5vw, 2.5rem);
     font-weight: 800;
     letter-spacing: -0.02em;
     background: linear-gradient(180deg, #ffffff 0%, #b9c9f5 100%);
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
-  header p { margin: 0 auto; max-width: 560px; color: #a0a0a8; line-height: 1.6; letter-spacing: 0.01em; }
+  header p { margin: 0 auto; max-width: 560px; color: #a0a0a8; line-height: 1.5; font-size: clamp(0.85rem, 3.2vw, 0.98rem); letter-spacing: 0.01em; }
   header a { color: #8ab4ff; }
   .search-wrap {
-    max-width: 360px; margin: 24px auto 0; padding: 0 24px;
+    max-width: 380px; width: calc(100% - 32px); margin: 20px auto 0; padding: 0;
     animation: fadeInUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s both;
   }
   .search-wrap input {
-    width: 100%; padding: 11px 16px; border-radius: 12px;
+    width: 100%; padding: 12px 18px; border-radius: 14px;
     background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
-    color: #f2f2f4; font-size: 0.9rem; outline: none;
+    color: #f2f2f4; font-size: 0.92rem; outline: none;
   }
   .search-wrap input::placeholder { color: #7a7a82; }
   .search-wrap input:focus { border-color: rgba(255,255,255,0.3); }
   .filter-bar {
     display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
-    max-width: 900px; margin: 16px auto 0; padding: 0 24px;
+    max-width: 800px; width: calc(100% - 32px); margin: 16px auto 0; padding: 0;
     animation: fadeInUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.18s both;
   }
   .chip {
@@ -140,10 +145,11 @@
   .card.hidden { display: none; }
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 16px;
-    padding: 24px;
-    max-width: 1100px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 24px 0;
+    width: calc(100% - 32px);
+    max-width: 1280px;
     margin: 0 auto 64px;
   }
   .card {
@@ -151,21 +157,25 @@
     cursor: pointer;
     position: relative;
     aspect-ratio: 9 / 16;
-    border-radius: 16px;
+    border-radius: 18px;
     overflow: hidden;
     background: #1a1a1e;
     border: 1px solid rgba(255,255,255,0.08);
     opacity: 0;
     transform: translateY(28px);
-    transition: transform 0.6s cubic-bezier(0.16,1,0.3,1), opacity 0.6s cubic-bezier(0.16,1,0.3,1), border-color 0.15s ease;
+    transition: transform 0.6s cubic-bezier(0.16,1,0.3,1), opacity 0.6s cubic-bezier(0.16,1,0.3,1), border-color 0.2s ease, box-shadow 0.2s ease;
   }
   .card.in-view { opacity: 1; transform: translateY(0); }
-  .card.tilting { transition: transform 0.08s ease-out, border-color 0.15s ease; }
+  .card.tilting { transition: transform 0.08s ease-out, border-color 0.15s ease, box-shadow 0.15s ease; }
+  .card:hover {
+    border-color: rgba(255,255,255,0.22);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.65), 0 0 24px rgba(91,140,255,0.18);
+  }
   .card:focus-visible { border-color: rgba(255,255,255,0.3); outline: 2px solid rgba(138,180,255,0.6); outline-offset: 2px; }
   .card img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .card-fallback {
     width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
-    padding: 12px; text-align: center; font-size: 0.85rem; color: #a0a0a8;
+    padding: 16px; text-align: center; font-size: 0.95rem; color: #a0a0a8;
   }
   /* Cursor-tracked glare — sits above the thumbnail and caption (::after
      paints last), only lit up while .tilting is toggled on by pointer JS. */
@@ -181,12 +191,12 @@
   .card.tilting::after { opacity: 1; }
   .card-caption {
     position: absolute; left: 0; right: 0; bottom: 0;
-    padding: 10px 10px 8px;
-    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0));
-    display: flex; justify-content: space-between; align-items: baseline; gap: 6px;
+    padding: 14px 12px 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0) 100%);
+    display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
   }
-  .card-name { font-size: 0.78rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .card-stars { font-size: 0.72rem; color: #f5c451; flex-shrink: 0; }
+  .card-name { font-size: 0.85rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .card-stars { font-size: 0.78rem; color: #f5c451; flex-shrink: 0; font-weight: 500; }
 
   /* --- liquid-glass modal --- */
   .overlay {
@@ -244,9 +254,15 @@
     display: flex; align-items: center; justify-content: center;
     background: rgba(255,255,255,0.1); font-size: 1rem;
   }
-  @media (max-width: 520px) {
-    .dialog { grid-template-columns: 1fr; }
-    .dialog img { max-height: 260px; }
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: 1fr;
+      max-width: min(350px, calc(100% - 32px));
+      padding: 16px 0;
+      gap: 20px;
+    }
+    .dialog { grid-template-columns: 1fr; padding: 20px; }
+    .dialog img { max-height: 280px; }
   }
   footer { text-align: center; padding: 24px; color: #6f6f76; font-size: 0.85rem; }
   footer a { color: #8ab4ff; }
