@@ -79,6 +79,23 @@ async function main() {
 
   writeFileSync(htmlPath, html, "utf8");
 
+  // repos/<slug>/index.html — the detail pages carry the same badge as the
+  // card ("★ X" inside .facts). Without this they would keep the
+  // authoring-time snapshot forever, and the same repo would show two
+  // different star counts on two pages of the same site.
+  for (const u of updates) {
+    const pagePath = new URL(`../repos/${u.slug}/index.html`, import.meta.url);
+    let page;
+    try {
+      page = readFileSync(pagePath, "utf8");
+    } catch {
+      continue; // no detail page for this slug — nothing to refresh
+    }
+    const badgeRe = new RegExp(`(<span>★ )${escapeRegExp(u.from)}(</span>)`);
+    if (!badgeRe.test(page)) continue;
+    writeFileSync(pagePath, page.replace(badgeRe, `$1${esc(u.to)}$2`), "utf8");
+  }
+
   // README.md table — one row per repo, "| [fullName](url) | stars | ..." —
   // match by fullName so row order doesn't matter.
   const readmePath = new URL("../README.md", import.meta.url);

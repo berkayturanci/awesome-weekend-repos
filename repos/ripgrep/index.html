@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BurntSushi/ripgrep — A code search tool that skips the junk and just finishes</title>
+<meta name="description" content="A code search tool that skips the junk and just finishes" />
+<meta name="author" content="Berkay Turancı" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0b0b0d" />
+<link rel="canonical" href="https://berkayturanci.github.io/awesome-weekend-repos/repos/ripgrep/" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Awesome Weekend Repos" />
+<meta property="og:title" content="BurntSushi/ripgrep — A code search tool that skips the junk and just finishes" />
+<meta property="og:description" content="A code search tool that skips the junk and just finishes" />
+<meta property="og:url" content="https://berkayturanci.github.io/awesome-weekend-repos/repos/ripgrep/" />
+<meta property="og:image" content="https://berkayturanci.github.io/awesome-weekend-repos/assets/thumbs/ripgrep.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="BurntSushi/ripgrep" />
+<meta name="twitter:description" content="A code search tool that skips the junk and just finishes" />
+<meta name="twitter:image" content="https://berkayturanci.github.io/awesome-weekend-repos/assets/thumbs/ripgrep.webp" />
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon.png" />
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareSourceCode","name":"ripgrep","codeRepository":"https://github.com/BurntSushi/ripgrep","description":"A code search tool that skips the junk and just finishes","programmingLanguage":"Rust","license":"MIT / Unlicense","url":"https://berkayturanci.github.io/awesome-weekend-repos/repos/ripgrep/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Awesome Weekend Repos","item":"https://berkayturanci.github.io/awesome-weekend-repos/"},{"@type":"ListItem","position":2,"name":"BurntSushi/ripgrep","item":"https://berkayturanci.github.io/awesome-weekend-repos/repos/ripgrep/"}]}]}</script>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #0b0b0d; color: #f2f2f4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  .crumb { font-size: 0.85rem; color: #6f6f76; margin-bottom: 24px; }
+  .crumb a { color: #9aa4b2; text-decoration: none; }
+  .crumb a:hover { color: #5b8cff; text-decoration: underline; }
+  h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 8px; letter-spacing: -0.02em; }
+  .promise { font-size: 1.1rem; color: #c9c9d1; margin: 0 0 20px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .facts span { font-size: 0.8rem; color: #9aa4b2; background: #16161a;
+    border: 1px solid #23232a; border-radius: 999px; padding: 4px 12px; }
+  .shot { width: 100%; height: auto; border-radius: 12px; border: 1px solid #23232a;
+    margin-bottom: 28px; display: block; }
+  .hook { font-size: 1.05rem; color: #f2f2f4; border-left: 3px solid #5b8cff;
+    padding-left: 14px; margin: 0 0 32px; }
+  h2 { font-size: 1.05rem; margin: 28px 0 6px; letter-spacing: -0.01em; }
+  p { margin: 0 0 8px; color: #c9c9d1; }
+  .note { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem; color: #8a8a93; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; margin: 36px 0 0;
+    padding-top: 24px; border-top: 1px solid #1c1c21; }
+  .links a { color: #5b8cff; text-decoration: none; font-size: 0.9rem; }
+  .links a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <main>
+    <nav class="crumb"><a href="../../">Awesome Weekend Repos</a> › BurntSushi/ripgrep</nav>
+    <h1>BurntSushi/ripgrep</h1>
+    <p class="promise">A code search tool that skips the junk and just finishes</p>
+    <div class="facts"><span>★ 67.4k</span><span>Rust</span><span>MIT / Unlicense license</span></div>
+    <img class="shot" src="../../assets/thumbs/ripgrep.webp" alt="BurntSushi/ripgrep" loading="lazy" />
+    <p class="hook">Search the whole Linux kernel in 0.08 seconds</p>
+    <h2>It just finishes.</h2>
+    <p>Point it at a codebase and it's done before you blink. The project's own benchmark: five hundred thirty-six matches across the Linux kernel in 0.082 seconds — git grep took thirty-two times longer.</p>
+    <p class="note">README benchmark: 0.082s vs git grep 2.670s</p>
+    <h2>It skips what you'd never read anyway.</h2>
+    <p>Here's the trick: by default it respects your gitignore, skips hidden files, skips binaries. It's not just faster at searching — it searches less, and only the part you actually care about.</p>
+    <p class="note">.gitignore · hidden · binary skipped — rg -uuu disables</p>
+    <h2>Search only the files that matter.</h2>
+    <p>Need just Python? rg dash t py. Everything except JavaScript? Dash capital T js. Type filters are built in — no find-pipe-grep gymnastics.</p>
+    <p class="note">rg -tpy foo · rg -Tjs foo — include or exclude file types</p>
+    <h2>All of grep's tricks, none of the wait.</h2>
+    <p>And you give nothing up. Unicode is always on and still fast. It searches inside gzip and zstd archives, does replacements, and can switch to PCRE2 when you need look-arounds.</p>
+    <p class="note">Unicode always-on · -z compressed search · PCRE2 optional</p>
+    <h2>66k stars. One binary. Rust.</h2>
+    <p>Sixty-six thousand stars, written in Rust, dual licensed MIT or Unlicense. Comment &quot;rg&quot; and I'll send you the repo.</p>
+    <p class="note">BurntSushi/ripgrep · MIT / Unlicense</p>
+    <div class="links"><a href="https://youtube.com/shorts/oTEUo-owv3Y">Watch on YouTube</a><a href="https://www.instagram.com/p/Da4zaHqSl7_/">Watch on Instagram</a><a href="https://github.com/BurntSushi/ripgrep">View on GitHub</a></div>
+  </main>
+</body>
+</html>

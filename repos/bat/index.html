@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>sharkdp/bat — cat's output, with syntax highlighting and your git changes inline</title>
+<meta name="description" content="cat's output, with syntax highlighting and your git changes inline" />
+<meta name="author" content="Berkay Turancı" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0b0b0d" />
+<link rel="canonical" href="https://berkayturanci.github.io/awesome-weekend-repos/repos/bat/" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Awesome Weekend Repos" />
+<meta property="og:title" content="sharkdp/bat — cat's output, with syntax highlighting and your git changes inline" />
+<meta property="og:description" content="cat's output, with syntax highlighting and your git changes inline" />
+<meta property="og:url" content="https://berkayturanci.github.io/awesome-weekend-repos/repos/bat/" />
+<meta property="og:image" content="https://berkayturanci.github.io/awesome-weekend-repos/assets/thumbs/bat.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="sharkdp/bat" />
+<meta name="twitter:description" content="cat's output, with syntax highlighting and your git changes inline" />
+<meta name="twitter:image" content="https://berkayturanci.github.io/awesome-weekend-repos/assets/thumbs/bat.webp" />
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon.png" />
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareSourceCode","name":"bat","codeRepository":"https://github.com/sharkdp/bat","description":"cat's output, with syntax highlighting and your git changes inline","programmingLanguage":"Rust","license":"MIT / Apache-2.0","url":"https://berkayturanci.github.io/awesome-weekend-repos/repos/bat/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Awesome Weekend Repos","item":"https://berkayturanci.github.io/awesome-weekend-repos/"},{"@type":"ListItem","position":2,"name":"sharkdp/bat","item":"https://berkayturanci.github.io/awesome-weekend-repos/repos/bat/"}]}]}</script>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #0b0b0d; color: #f2f2f4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  .crumb { font-size: 0.85rem; color: #6f6f76; margin-bottom: 24px; }
+  .crumb a { color: #9aa4b2; text-decoration: none; }
+  .crumb a:hover { color: #5b8cff; text-decoration: underline; }
+  h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 8px; letter-spacing: -0.02em; }
+  .promise { font-size: 1.1rem; color: #c9c9d1; margin: 0 0 20px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .facts span { font-size: 0.8rem; color: #9aa4b2; background: #16161a;
+    border: 1px solid #23232a; border-radius: 999px; padding: 4px 12px; }
+  .shot { width: 100%; height: auto; border-radius: 12px; border: 1px solid #23232a;
+    margin-bottom: 28px; display: block; }
+  .hook { font-size: 1.05rem; color: #f2f2f4; border-left: 3px solid #5b8cff;
+    padding-left: 14px; margin: 0 0 32px; }
+  h2 { font-size: 1.05rem; margin: 28px 0 6px; letter-spacing: -0.01em; }
+  p { margin: 0 0 8px; color: #c9c9d1; }
+  .note { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem; color: #8a8a93; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; margin: 36px 0 0;
+    padding-top: 24px; border-top: 1px solid #1c1c21; }
+  .links a { color: #5b8cff; text-decoration: none; font-size: 0.9rem; }
+  .links a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <main>
+    <nav class="crumb"><a href="../../">Awesome Weekend Repos</a> › sharkdp/bat</nav>
+    <h1>sharkdp/bat</h1>
+    <p class="promise">cat's output, with syntax highlighting and your git changes inline</p>
+    <div class="facts"><span>★ 60.2k</span><span>Rust</span><span>MIT / Apache-2.0 license</span></div>
+    <img class="shot" src="../../assets/thumbs/bat.webp" alt="sharkdp/bat" loading="lazy" />
+    <p class="hook">See your files the way your editor does</p>
+    <h2>Same command. Readable output.</h2>
+    <p>It's the official tagline: a cat clone with wings. Same one-word command, but the output comes back highlighted for a huge list of languages, with line numbers.</p>
+    <p class="note">syntax highlighting — a large number of languages</p>
+    <h2>It shows what you changed, inline.</h2>
+    <p>bat talks to git. Modified lines get marked right in the left margin — you see your uncommitted changes while you're reading the file, not after a diff.</p>
+    <p class="note">git gutter — modifications vs. the index</p>
+    <h2>Pipe it — it behaves like cat.</h2>
+    <p>The part that makes it safe: pipe it into anything and it detects the non-interactive terminal, drops the decorations, and acts as a drop-in cat replacement. Scripts never notice.</p>
+    <p class="note">piped → plain output · alias cat='bat --paging=never'</p>
+    <h2>Line numbers, grid, and git marks.</h2>
+    <p>Here's the project's own example, up close — numbers, a clean grid, the syntax doing the reading for you.</p>
+    <p class="note">the README's own example output</p>
+    <h2>59.8k stars. cat, with wings.</h2>
+    <p>Fifty-nine point eight thousand stars, written in Rust, MIT or Apache licensed. Link's in the description — alias it once and forget cat ever looked like that.</p>
+    <p class="note">sharkdp/bat · MIT / Apache-2.0</p>
+    <div class="links"><a href="https://www.youtube.com/shorts/-j3TVa_IeVs">Watch on YouTube</a><a href="https://www.instagram.com/reel/Da9vABgSyvG/">Watch on Instagram</a><a href="https://github.com/sharkdp/bat">View on GitHub</a></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>firecrawl — Turn any website into clean LLM-ready markdown.</title>
+<meta name="description" content="Turn any website into clean LLM-ready markdown." />
+<meta name="author" content="Berkay Turancı" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0b0b0d" />
+<link rel="canonical" href="https://berkayturanci.github.io/awesome-weekend-repos/repos/firecrawl/" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Awesome Weekend Repos" />
+<meta property="og:title" content="firecrawl — Turn any website into clean LLM-ready markdown." />
+<meta property="og:description" content="Turn any website into clean LLM-ready markdown." />
+<meta property="og:url" content="https://berkayturanci.github.io/awesome-weekend-repos/repos/firecrawl/" />
+<meta property="og:image" content="https://berkayturanci.github.io/awesome-weekend-repos/assets/thumbs/firecrawl.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="firecrawl" />
+<meta name="twitter:description" content="Turn any website into clean LLM-ready markdown." />
+<meta name="twitter:image" content="https://berkayturanci.github.io/awesome-weekend-repos/assets/thumbs/firecrawl.webp" />
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon.png" />
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareSourceCode","name":"firecrawl","description":"Turn any website into clean LLM-ready markdown.","programmingLanguage":"TypeScript","url":"https://berkayturanci.github.io/awesome-weekend-repos/repos/firecrawl/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Awesome Weekend Repos","item":"https://berkayturanci.github.io/awesome-weekend-repos/"},{"@type":"ListItem","position":2,"name":"firecrawl","item":"https://berkayturanci.github.io/awesome-weekend-repos/repos/firecrawl/"}]}]}</script>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #0b0b0d; color: #f2f2f4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  .crumb { font-size: 0.85rem; color: #6f6f76; margin-bottom: 24px; }
+  .crumb a { color: #9aa4b2; text-decoration: none; }
+  .crumb a:hover { color: #5b8cff; text-decoration: underline; }
+  h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 8px; letter-spacing: -0.02em; }
+  .promise { font-size: 1.1rem; color: #c9c9d1; margin: 0 0 20px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .facts span { font-size: 0.8rem; color: #9aa4b2; background: #16161a;
+    border: 1px solid #23232a; border-radius: 999px; padding: 4px 12px; }
+  .shot { width: 100%; height: auto; border-radius: 12px; border: 1px solid #23232a;
+    margin-bottom: 28px; display: block; }
+  .hook { font-size: 1.05rem; color: #f2f2f4; border-left: 3px solid #5b8cff;
+    padding-left: 14px; margin: 0 0 32px; }
+  h2 { font-size: 1.05rem; margin: 28px 0 6px; letter-spacing: -0.01em; }
+  p { margin: 0 0 8px; color: #c9c9d1; }
+  .note { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem; color: #8a8a93; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; margin: 36px 0 0;
+    padding-top: 24px; border-top: 1px solid #1c1c21; }
+  .links a { color: #5b8cff; text-decoration: none; font-size: 0.9rem; }
+  .links a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <main>
+    <nav class="crumb"><a href="../../">Awesome Weekend Repos</a> › firecrawl</nav>
+    <h1>firecrawl</h1>
+    <p class="promise">Turn any website into clean LLM-ready markdown.</p>
+    <div class="facts"><span>★ 20k</span><span>TypeScript</span></div>
+    <img class="shot" src="../../assets/thumbs/firecrawl.webp" alt="firecrawl" loading="lazy" />
+    <p class="hook">Stop writing custom web scrapers for LLMs.</p>
+    <h2>AI needs markdown, not messy HTML.</h2>
+    <p>When you feed web pages to LLMs, raw HTML wastes tokens and breaks prompts. Firecrawl cleans the page, removing ads, trackers, and style noise instantly.</p>
+    <p class="note">Raw HTML wastes LLM tokens; markdown is clean and structured</p>
+    <h2>Run Firecrawl with one command.</h2>
+    <p>You can run Firecrawl locally on your machine with one Docker command. It spins up a local API ready to scrape and crawl.</p>
+    <p class="note">docker run -p 3002:3002 firecrawl/firecrawl</p>
+    <h2>Scrape any page with a simple API call.</h2>
+    <p>Send a POST request to scrape a single page. It handles JavaScript-heavy sites, proxies, and rate limits out of the box.</p>
+    <p class="note">Handles dynamic JS and proxies automatically</p>
+    <h2>Define schema to extract structured JSON.</h2>
+    <p>You can pass a Zod schema to extract exactly the fields you need, like pricing tables, article authors, or product details as clean JSON.</p>
+    <p class="note">Extract structured data using custom schemas</p>
+    <h2>20k stars. TypeScript. AGPL Licensed.</h2>
+    <p>Firecrawl has over twenty thousand stars on GitHub, is written in TypeScript, and uses a self-hostable AGPL-3.0 License.</p>
+    <p class="note">mendableai/firecrawl · TypeScript · AGPL-3.0 License</p>
+    <div class="links"><a href="https://youtube.com/shorts/lhQqH4dEO6s">Watch on YouTube</a><a href="https://www.instagram.com/p/Db3QLCTy5fe/">Watch on Instagram</a></div>
+  </main>
+</body>
+</html>

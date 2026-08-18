@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>nektos/act — Test your CI without pushing — Docker containers, locally</title>
+<meta name="description" content="Test your CI without pushing — Docker containers, locally" />
+<meta name="author" content="Berkay Turancı" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0b0b0d" />
+<link rel="canonical" href="https://berkayturanci.github.io/awesome-weekend-repos/repos/act/" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Awesome Weekend Repos" />
+<meta property="og:title" content="nektos/act — Test your CI without pushing — Docker containers, locally" />
+<meta property="og:description" content="Test your CI without pushing — Docker containers, locally" />
+<meta property="og:url" content="https://berkayturanci.github.io/awesome-weekend-repos/repos/act/" />
+<meta property="og:image" content="https://berkayturanci.github.io/awesome-weekend-repos/assets/thumbs/act.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="nektos/act" />
+<meta name="twitter:description" content="Test your CI without pushing — Docker containers, locally" />
+<meta name="twitter:image" content="https://berkayturanci.github.io/awesome-weekend-repos/assets/thumbs/act.webp" />
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon.png" />
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareSourceCode","name":"act","codeRepository":"https://github.com/nektos/act","description":"Test your CI without pushing — Docker containers, locally","programmingLanguage":"Go","license":"MIT","url":"https://berkayturanci.github.io/awesome-weekend-repos/repos/act/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Awesome Weekend Repos","item":"https://berkayturanci.github.io/awesome-weekend-repos/"},{"@type":"ListItem","position":2,"name":"nektos/act","item":"https://berkayturanci.github.io/awesome-weekend-repos/repos/act/"}]}]}</script>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #0b0b0d; color: #f2f2f4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  .crumb { font-size: 0.85rem; color: #6f6f76; margin-bottom: 24px; }
+  .crumb a { color: #9aa4b2; text-decoration: none; }
+  .crumb a:hover { color: #5b8cff; text-decoration: underline; }
+  h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 8px; letter-spacing: -0.02em; }
+  .promise { font-size: 1.1rem; color: #c9c9d1; margin: 0 0 20px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .facts span { font-size: 0.8rem; color: #9aa4b2; background: #16161a;
+    border: 1px solid #23232a; border-radius: 999px; padding: 4px 12px; }
+  .shot { width: 100%; height: auto; border-radius: 12px; border: 1px solid #23232a;
+    margin-bottom: 28px; display: block; }
+  .hook { font-size: 1.05rem; color: #f2f2f4; border-left: 3px solid #5b8cff;
+    padding-left: 14px; margin: 0 0 32px; }
+  h2 { font-size: 1.05rem; margin: 28px 0 6px; letter-spacing: -0.01em; }
+  p { margin: 0 0 8px; color: #c9c9d1; }
+  .note { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem; color: #8a8a93; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; margin: 36px 0 0;
+    padding-top: 24px; border-top: 1px solid #1c1c21; }
+  .links a { color: #5b8cff; text-decoration: none; font-size: 0.9rem; }
+  .links a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <main>
+    <nav class="crumb"><a href="../../">Awesome Weekend Repos</a> › nektos/act</nav>
+    <h1>nektos/act</h1>
+    <p class="promise">Test your CI without pushing — Docker containers, locally</p>
+    <div class="facts"><span>★ 71.5k</span><span>Go</span><span>MIT license</span></div>
+    <img class="shot" src="../../assets/thumbs/act.webp" alt="nektos/act" loading="lazy" />
+    <p class="hook">Stop pushing fix-ci twenty times.</p>
+    <h2>The CI loop that wastes your time.</h2>
+    <p>You write, you commit, you push, you wait — red. Again. Twenty commits later, green. act breaks that loop.</p>
+    <p class="note">push → wait → fail → repeat</p>
+    <h2>One command runs your workflow locally.</h2>
+    <p>The act command reads your .github/workflows/, pulls Docker images, and runs the workflow locally. Same environment, same variables, your machine.</p>
+    <p class="note">act → reads workflows → runs in Docker</p>
+    <h2>It matches GitHub's environment exactly.</h2>
+    <p>It mirrors the environment variables, secrets, and filesystem that GitHub provides. If it passes here, it passes there.</p>
+    <p class="note">env vars · secrets · fs → matches GitHub</p>
+    <h2>Run just one job, or the whole workflow.</h2>
+    <p>Run a single job instead of the whole workflow. Or trigger a specific event — pull_request, push, schedule. You control what gets tested.</p>
+    <p class="note">act -j test · act pull_request · act push</p>
+    <h2>71.2k stars. Go. MIT.</h2>
+    <p>Seventy-one thousand stars, written in Go, MIT licensed. One binary to break the CI loop.</p>
+    <p class="note">nektos/act · Go · MIT</p>
+    <div class="links"><a href="https://youtube.com/shorts/R6yNrU9o6x4">Watch on YouTube</a><a href="https://www.instagram.com/p/DbXlw6zSCVZ/">Watch on Instagram</a><a href="https://github.com/nektos/act">View on GitHub</a></div>
+  </main>
+</body>
+</html>
