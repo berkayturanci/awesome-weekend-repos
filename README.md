@@ -16,13 +16,13 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
-| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 110.3k | Python | MIT | An open-source tool that turns one topic into a finished short video | [▶ YouTube](https://youtube.com/shorts/ydpVzbt6V7w) · [Instagram](https://www.instagram.com/reel/DcMGpf2DHkt/) |
+| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 110.4k | Python | MIT | An open-source tool that turns one topic into a finished short video | [▶ YouTube](https://youtube.com/shorts/ydpVzbt6V7w) · [Instagram](https://www.instagram.com/reel/DcMGpf2DHkt/) |
 | [uv]() | 88.8k | Rust |  | Replace pip, virtualenv, and poetry at 10x to 100x speed | [▶ YouTube](https://youtube.com/shorts/LW9OQCN2YYc) · [Instagram](https://www.instagram.com/reel/DcJhpukjkd1/) |
 | [agent-skills]() | 87.6k | JavaScript |  | Production-grade software engineering skill library for AI agents | [▶ YouTube](https://youtube.com/shorts/Pn0vVFl-XyQ) · [Instagram](https://www.instagram.com/reel/DcG8wZ5DrGk/) |
 | [strix]() | 2.4k | Python |  | Autonomous AI agent that finds and exploits web vulnerabilities | [▶ YouTube](https://youtube.com/shorts/7U4G8y2kvrQ) · [Instagram](https://www.instagram.com/p/DcEgunAS1KC/) |
 | [diagram-design]() | 14.1k | HTML |  | 29 editorial SVG diagram templates for Claude Code and LLMs | [▶ YouTube](https://youtube.com/shorts/Joyie3Kub6Y) · [Instagram](https://www.instagram.com/reel/DcBldyejFeL/) |
 | [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) | 73.1k | Python | MIT | Give AI agents multi-platform web scraping across Twitter and Reddit | [▶ YouTube](https://youtube.com/shorts/AUAM8uqG4yU) · [Instagram](https://www.instagram.com/p/Db_VTDsDoL9/) |
-| [santifer/career-ops](https://github.com/santifer/career-ops) | 65.6k | TypeScript | MIT | Scan job portals and tailor resumes using open-source AI | [▶ YouTube](https://www.youtube.com/shorts/xtFWD0P95Z8) · [Instagram](https://www.instagram.com/p/Db8ZWhXSQkJ/) |
+| [santifer/career-ops](https://github.com/santifer/career-ops) | 65.7k | TypeScript | MIT | Scan job portals and tailor resumes using open-source AI | [▶ YouTube](https://www.youtube.com/shorts/xtFWD0P95Z8) · [Instagram](https://www.instagram.com/p/Db8ZWhXSQkJ/) |
 | [OpenHands/OpenHands](https://github.com/OpenHands/OpenHands) | 84.5k | Python | MIT | Build full software features locally using open-source AI developers | [▶ YouTube](https://youtube.com/shorts/rnC_DYO7ocQ) · [Instagram](https://www.instagram.com/p/Db5vrTVy2pK/) |
 | [firecrawl]() | 20k | TypeScript |  | Turn any website into clean LLM-ready markdown. | [▶ YouTube](https://youtube.com/shorts/lhQqH4dEO6s) · [Instagram](https://www.instagram.com/p/Db3QLCTy5fe/) |
 | [n8n]() | 196k | TypeScript |  | Self-hosted workflow automation with no per-task fees. | [▶ YouTube](https://youtube.com/shorts/_zVsJv7m600) · [Instagram](https://www.instagram.com/p/DbvkqE7ybBt/) |
