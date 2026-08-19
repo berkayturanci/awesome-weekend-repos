@@ -16,7 +16,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
-| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 109k | Python | MIT | An open-source tool that turns one topic into a finished short video | [▶ YouTube](https://youtube.com/shorts/ydpVzbt6V7w) · [Instagram](https://www.instagram.com/reel/DcMGpf2DHkt/) |
+| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 109.1k | Python | MIT | An open-source tool that turns one topic into a finished short video | [▶ YouTube](https://youtube.com/shorts/ydpVzbt6V7w) · [Instagram](https://www.instagram.com/reel/DcMGpf2DHkt/) |
 | [uv]() | 88.8k | Rust |  | Replace pip, virtualenv, and poetry at 10x to 100x speed | [▶ YouTube](https://youtube.com/shorts/LW9OQCN2YYc) · [Instagram](https://www.instagram.com/reel/DcJhpukjkd1/) |
 | [agent-skills]() | 87.6k | JavaScript |  | Production-grade software engineering skill library for AI agents | [▶ YouTube](https://youtube.com/shorts/Pn0vVFl-XyQ) · [Instagram](https://www.instagram.com/reel/DcG8wZ5DrGk/) |
 | [strix]() | 2.4k | Python |  | Autonomous AI agent that finds and exploits web vulnerabilities | [▶ YouTube](https://youtube.com/shorts/7U4G8y2kvrQ) · [Instagram](https://www.instagram.com/p/DcEgunAS1KC/) |
@@ -40,7 +40,7 @@ same source the videos are built from, so it never drifts.
 | [citrolabs/ego-lite](https://github.com/citrolabs/ego-lite) | 11.9k | JavaScript | MIT | Run AI agents in parallel without fighting over your tabs | [▶ YouTube](https://youtube.com/shorts/xDdPos6rSQE) · [Instagram](https://www.instagram.com/p/DbKyrrASs_V/) |
 | [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide) |  |  | MIT | Five modern command-line tools that upgrade your terminal. | [▶ YouTube](https://youtube.com/shorts/JqcMj1KdOWs) · [Instagram](https://www.instagram.com/p/DbIRYMajvBn/) |
 | [jesseduffield/lazygit](https://github.com/jesseduffield/lazygit) | 81.4k | Go | MIT | A keyboard-driven UI for git, right inside your terminal. | [▶ YouTube](https://youtube.com/shorts/HoYm4RoIHN8) · [Instagram](https://www.instagram.com/p/DbGFrXbyB5f/) |
-| [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) | 84.9k | TypeScript | MIT | A full timeline video editor — free, open-source, and fully local | [▶ YouTube](https://youtube.com/shorts/vfcp7noSAjA) · [Instagram](https://www.instagram.com/p/DbDNN62SN0N/) |
+| [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) | 85k | TypeScript | MIT | A full timeline video editor — free, open-source, and fully local | [▶ YouTube](https://youtube.com/shorts/vfcp7noSAjA) · [Instagram](https://www.instagram.com/p/DbDNN62SN0N/) |
 | [sharkdp/bat](https://github.com/sharkdp/bat) | 60.2k | Rust | MIT / Apache-2.0 | cat's output, with syntax highlighting and your git changes inline | [▶ YouTube](https://www.youtube.com/shorts/-j3TVa_IeVs) · [Instagram](https://www.instagram.com/reel/Da9vABgSyvG/) |
 | [junegunn/fzf](https://github.com/junegunn/fzf) | 82.6k | Go | MIT | Type a few letters, find any file, command, or branch instantly | [▶ YouTube](https://www.youtube.com/shorts/xLwY35ujRQ4) · [Instagram](https://www.instagram.com/reel/Da8MHUkSPI-/) |
 | [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) | 67.4k | Rust | MIT / Unlicense | A code search tool that skips the junk and just finishes | [▶ YouTube](https://youtube.com/shorts/oTEUo-owv3Y) · [Instagram](https://www.instagram.com/p/Da4zaHqSl7_/) |
