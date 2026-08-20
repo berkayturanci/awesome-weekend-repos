@@ -16,7 +16,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
-| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 111.2k | Python | MIT | An open-source tool that turns one topic into a finished short video | [▶ YouTube](https://youtube.com/shorts/ydpVzbt6V7w) · [Instagram](https://www.instagram.com/reel/DcMGpf2DHkt/) |
+| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 111.3k | Python | MIT | An open-source tool that turns one topic into a finished short video | [▶ YouTube](https://youtube.com/shorts/ydpVzbt6V7w) · [Instagram](https://www.instagram.com/reel/DcMGpf2DHkt/) |
 | [uv]() | 88.8k | Rust |  | Replace pip, virtualenv, and poetry at 10x to 100x speed | [▶ YouTube](https://youtube.com/shorts/LW9OQCN2YYc) · [Instagram](https://www.instagram.com/reel/DcJhpukjkd1/) |
 | [agent-skills]() | 87.6k | JavaScript |  | Production-grade software engineering skill library for AI agents | [▶ YouTube](https://youtube.com/shorts/Pn0vVFl-XyQ) · [Instagram](https://www.instagram.com/reel/DcG8wZ5DrGk/) |
 | [strix]() | 2.4k | Python |  | Autonomous AI agent that finds and exploits web vulnerabilities | [▶ YouTube](https://youtube.com/shorts/7U4G8y2kvrQ) · [Instagram](https://www.instagram.com/p/DcEgunAS1KC/) |
@@ -36,7 +36,7 @@ same source the videos are built from, so it never drifts.
 | [diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute) | 51.3k |  | MIT | A free local AI gateway routing across 290+ providers, no quota wall | [▶ YouTube](https://youtube.com/shorts/3bB84HtWQ4o) · [Instagram](https://www.instagram.com/p/DbVAx_sS7nv/) |
 | [tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) | 30.6k |  | MIT | A local code graph that gives AI agents only the files that changed | [▶ YouTube](https://youtube.com/shorts/olemkIjZz7w) · [Instagram](https://www.instagram.com/p/DbSabZHSPjA/) |
 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 233.1k | Python | MIT | An open-source coding agent that builds its own skills over time | [▶ YouTube](https://youtube.com/shorts/R7nQ0a7r0bw) · [Instagram](https://www.instagram.com/p/DbQL95xSXBZ/) |
-| [stablyai/orca](https://github.com/stablyai/orca) | 49.2k | TypeScript | MIT | Run and manage a fleet of parallel AI coding agents in one workspace | [▶ YouTube](https://youtube.com/shorts/mZKg2xsKZVc) · [Instagram](https://www.instagram.com/p/DbOQSdmSZ5C/) |
+| [stablyai/orca](https://github.com/stablyai/orca) | 49.3k | TypeScript | MIT | Run and manage a fleet of parallel AI coding agents in one workspace | [▶ YouTube](https://youtube.com/shorts/mZKg2xsKZVc) · [Instagram](https://www.instagram.com/p/DbOQSdmSZ5C/) |
 | [citrolabs/ego-lite](https://github.com/citrolabs/ego-lite) | 12.1k | JavaScript | MIT | Run AI agents in parallel without fighting over your tabs | [▶ YouTube](https://youtube.com/shorts/xDdPos6rSQE) · [Instagram](https://www.instagram.com/p/DbKyrrASs_V/) |
 | [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide) |  |  | MIT | Five modern command-line tools that upgrade your terminal. | [▶ YouTube](https://youtube.com/shorts/JqcMj1KdOWs) · [Instagram](https://www.instagram.com/p/DbIRYMajvBn/) |
 | [jesseduffield/lazygit](https://github.com/jesseduffield/lazygit) | 81.5k | Go | MIT | A keyboard-driven UI for git, right inside your terminal. | [▶ YouTube](https://youtube.com/shorts/HoYm4RoIHN8) · [Instagram](https://www.instagram.com/p/DbGFrXbyB5f/) |
