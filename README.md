@@ -16,7 +16,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
-| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 112.6k | Python | MIT | An open-source tool that turns one topic into a finished short video | [▶ YouTube](https://youtube.com/shorts/ydpVzbt6V7w) · [Instagram](https://www.instagram.com/reel/DcMGpf2DHkt/) |
+| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 112.7k | Python | MIT | An open-source tool that turns one topic into a finished short video | [▶ YouTube](https://youtube.com/shorts/ydpVzbt6V7w) · [Instagram](https://www.instagram.com/reel/DcMGpf2DHkt/) |
 | [uv]() | 88.8k | Rust |  | Replace pip, virtualenv, and poetry at 10x to 100x speed | [▶ YouTube](https://youtube.com/shorts/LW9OQCN2YYc) · [Instagram](https://www.instagram.com/reel/DcJhpukjkd1/) |
 | [agent-skills]() | 87.6k | JavaScript |  | Production-grade software engineering skill library for AI agents | [▶ YouTube](https://youtube.com/shorts/Pn0vVFl-XyQ) · [Instagram](https://www.instagram.com/reel/DcG8wZ5DrGk/) |
 | [strix]() | 2.4k | Python |  | Autonomous AI agent that finds and exploits web vulnerabilities | [▶ YouTube](https://youtube.com/shorts/7U4G8y2kvrQ) · [Instagram](https://www.instagram.com/p/DcEgunAS1KC/) |
@@ -35,7 +35,7 @@ same source the videos are built from, so it never drifts.
 | [nektos/act](https://github.com/nektos/act) | 71.6k | Go | MIT | Test your CI without pushing — Docker containers, locally | [▶ YouTube](https://youtube.com/shorts/R6yNrU9o6x4) · [Instagram](https://www.instagram.com/p/DbXlw6zSCVZ/) |
 | [diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute) | 51.8k |  | MIT | A free local AI gateway routing across 290+ providers, no quota wall | [▶ YouTube](https://youtube.com/shorts/3bB84HtWQ4o) · [Instagram](https://www.instagram.com/p/DbVAx_sS7nv/) |
 | [tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) | 30.6k |  | MIT | A local code graph that gives AI agents only the files that changed | [▶ YouTube](https://youtube.com/shorts/olemkIjZz7w) · [Instagram](https://www.instagram.com/p/DbSabZHSPjA/) |
-| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 233.4k | Python | MIT | An open-source coding agent that builds its own skills over time | [▶ YouTube](https://youtube.com/shorts/R7nQ0a7r0bw) · [Instagram](https://www.instagram.com/p/DbQL95xSXBZ/) |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 233.5k | Python | MIT | An open-source coding agent that builds its own skills over time | [▶ YouTube](https://youtube.com/shorts/R7nQ0a7r0bw) · [Instagram](https://www.instagram.com/p/DbQL95xSXBZ/) |
 | [stablyai/orca](https://github.com/stablyai/orca) | 49.9k | TypeScript | MIT | Run and manage a fleet of parallel AI coding agents in one workspace | [▶ YouTube](https://youtube.com/shorts/mZKg2xsKZVc) · [Instagram](https://www.instagram.com/p/DbOQSdmSZ5C/) |
 | [citrolabs/ego-lite](https://github.com/citrolabs/ego-lite) | 12.2k | JavaScript | MIT | Run AI agents in parallel without fighting over your tabs | [▶ YouTube](https://youtube.com/shorts/xDdPos6rSQE) · [Instagram](https://www.instagram.com/p/DbKyrrASs_V/) |
 | [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide) |  |  | MIT | Five modern command-line tools that upgrade your terminal. | [▶ YouTube](https://youtube.com/shorts/JqcMj1KdOWs) · [Instagram](https://www.instagram.com/p/DbIRYMajvBn/) |
@@ -47,7 +47,7 @@ same source the videos are built from, so it never drifts.
 | [pocketbase/pocketbase](https://github.com/pocketbase/pocketbase) | 60.7k | Go | MIT | Database, auth, file storage, and an admin UI in a single binary | [▶ YouTube](https://youtube.com/shorts/t2ZdpKXFYQk) · [Instagram](https://www.instagram.com/p/Da2l-biS59i/) |
 | [coollabsio/coolify](https://github.com/coollabsio/coolify) | 60.8k | PHP | Apache 2.0 | Deploy apps, databases, and services to your own server — free forever | [▶ YouTube](https://youtube.com/shorts/HnKgqFbTung) · [Instagram](https://www.instagram.com/p/Da0avZIyBQu/) |
 | [ollama/ollama](https://github.com/ollama/ollama) | 179k | Go | MIT | One command to run open LLMs locally — no cloud, no API keys | [▶ YouTube](https://youtube.com/shorts/2-ZYlmG3_pA) · [Instagram](https://www.instagram.com/p/Dax1GyUyOfx/) |
-| [caddyserver/caddy](https://github.com/caddyserver/caddy) | 75k | Go | Apache-2.0 | Automatic HTTPS — certificates, renewals, and config, all handled | [▶ YouTube](https://youtube.com/shorts/YS_6BqGJ98A) · [Instagram](https://www.instagram.com/weekendrepos/reel/Davp-khyril/) |
+| [caddyserver/caddy](https://github.com/caddyserver/caddy) | 75.1k | Go | Apache-2.0 | Automatic HTTPS — certificates, renewals, and config, all handled | [▶ YouTube](https://youtube.com/shorts/YS_6BqGJ98A) · [Instagram](https://www.instagram.com/weekendrepos/reel/Davp-khyril/) |
 
 ## How this list works
 
