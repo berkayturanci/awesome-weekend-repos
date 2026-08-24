@@ -18,7 +18,7 @@ same source the videos are built from, so it never drifts.
 |---|---|---|---|---|---|
 | [syncthing]() |  |  |  | Replace centralized cloud storage with private peer-to-peer sync | [▶ YouTube](https://youtube.com/shorts/mjN9oPlZHNM) |
 | [alibaba/open-code-review](https://github.com/alibaba/open-code-review) | 21.3k | Go | Apache-2.0 | AI code review that reads every file and cites exact lines | [▶ YouTube](https://youtube.com/shorts/-TFTBNYFxvE) |
-| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 115.7k | Python | MIT | An open-source tool that turns one topic into a finished short video | [▶ YouTube](https://youtube.com/shorts/ydpVzbt6V7w) · [Instagram](https://www.instagram.com/reel/DcMGpf2DHkt/) |
+| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 115.8k | Python | MIT | An open-source tool that turns one topic into a finished short video | [▶ YouTube](https://youtube.com/shorts/ydpVzbt6V7w) · [Instagram](https://www.instagram.com/reel/DcMGpf2DHkt/) |
 | [uv]() | 88.8k | Rust |  | Replace pip, virtualenv, and poetry at 10x to 100x speed | [▶ YouTube](https://youtube.com/shorts/LW9OQCN2YYc) · [Instagram](https://www.instagram.com/reel/DcJhpukjkd1/) |
 | [agent-skills]() | 87.6k | JavaScript |  | Production-grade software engineering skill library for AI agents | [▶ YouTube](https://youtube.com/shorts/Pn0vVFl-XyQ) · [Instagram](https://www.instagram.com/reel/DcG8wZ5DrGk/) |
 | [strix]() | 2.4k | Python |  | Autonomous AI agent that finds and exploits web vulnerabilities | [▶ YouTube](https://youtube.com/shorts/7U4G8y2kvrQ) · [Instagram](https://www.instagram.com/p/DcEgunAS1KC/) |
