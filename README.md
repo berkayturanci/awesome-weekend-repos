@@ -19,6 +19,9 @@ same source the videos are built from, so it never drifts.
 | [zellij]() | 22k | Rust |  | Replace complex tmux configs with an instant modern terminal workspace | [▶ YouTube](https://youtube.com/shorts/meSXSTA7KGs) |
 | [atuin]() | 22k | Rust |  | Encrypted SQLite search and sync across all your terminal history | [▶ YouTube](https://youtube.com/shorts/nuXDxzWhQH0) |
 | [claude-obsidian]() | 2.4k | TypeScript |  | Give Claude Code persistent memory by linking your Obsidian vault | [▶ YouTube](https://youtube.com/shorts/zUE6tH5ktCs) |
+| [croc]() | 27.8k |  |  | Transfer 10 gigabytes directly between any two computers in 3 words | [▶ YouTube](https://youtube.com/shorts/slDE5JNU8pM) |
+| [httpie]() | 34.2k |  |  | Test REST and GraphQL APIs from the terminal with human syntax | [▶ YouTube](https://youtube.com/shorts/rPxLl0uaNDc) |
+| [zoxide]() | 24.1k |  |  | Teleport across your filesystem using frecency matching | [▶ YouTube](https://youtube.com/shorts/CKDyuvGt3Sw) |
 | [spec-kit]() | 131k | Python |  | Turn markdown specs into verified code with AI agents | [▶ YouTube](https://youtube.com/shorts/whKPrkW8fLM) |
 | [prime-agent]() |  |  |  | An open-source RL coding agent that tests and self-corrects code | [▶ YouTube](https://youtube.com/shorts/2tx-1Dkeb-g) |
 | [limbo]() |  |  |  | An open-source async SQLite engine written in pure Rust | [▶ YouTube](https://youtube.com/shorts/_fULyOhEmcQ) |
