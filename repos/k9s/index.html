@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>k9s — Manage Kubernetes clusters in your terminal with fast TUI shortcuts</title>
+<meta name="description" content="Manage Kubernetes clusters in your terminal with fast TUI shortcuts" />
+<meta name="author" content="Berkay Turancı" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0b0b0d" />
+<link rel="canonical" href="https://berkayturanci.github.io/awesome-weekend-repos/repos/k9s/" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Awesome Weekend Repos" />
+<meta property="og:title" content="k9s — Manage Kubernetes clusters in your terminal with fast TUI shortcuts" />
+<meta property="og:description" content="Manage Kubernetes clusters in your terminal with fast TUI shortcuts" />
+<meta property="og:url" content="https://berkayturanci.github.io/awesome-weekend-repos/repos/k9s/" />
+<meta property="og:image" content="https://berkayturanci.github.io/awesome-weekend-repos/assets/thumbs/k9s.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="derailed/k9s" />
+<meta name="twitter:description" content="Manage Kubernetes clusters in your terminal with fast TUI shortcuts" />
+<meta name="twitter:image" content="https://berkayturanci.github.io/awesome-weekend-repos/assets/thumbs/k9s.webp" />
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon.png" />
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareSourceCode","name":"k9s","codeRepository":"https://github.com/derailed/k9s","description":"Manage Kubernetes clusters in your terminal with fast TUI shortcuts","license":"Apache-2.0","url":"https://berkayturanci.github.io/awesome-weekend-repos/repos/k9s/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Awesome Weekend Repos","item":"https://berkayturanci.github.io/awesome-weekend-repos/"},{"@type":"ListItem","position":2,"name":"derailed/k9s","item":"https://berkayturanci.github.io/awesome-weekend-repos/repos/k9s/"}]}]}</script>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #0b0b0d; color: #f2f2f4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  .crumb { font-size: 0.85rem; color: #6f6f76; margin-bottom: 24px; }
+  .crumb a { color: #9aa4b2; text-decoration: none; }
+  .crumb a:hover { color: #5b8cff; text-decoration: underline; }
+  h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 8px; letter-spacing: -0.02em; }
+  .promise { font-size: 1.1rem; color: #c9c9d1; margin: 0 0 20px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .facts span { font-size: 0.8rem; color: #9aa4b2; background: #16161a;
+    border: 1px solid #23232a; border-radius: 999px; padding: 4px 12px; }
+  .shot { width: 100%; height: auto; border-radius: 12px; border: 1px solid #23232a;
+    margin-bottom: 28px; display: block; }
+  .hook { font-size: 1.05rem; color: #f2f2f4; border-left: 3px solid #5b8cff;
+    padding-left: 14px; margin: 0 0 32px; }
+  h2 { font-size: 1.05rem; margin: 28px 0 6px; letter-spacing: -0.01em; }
+  p { margin: 0 0 8px; color: #c9c9d1; }
+  .note { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem; color: #8a8a93; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; margin: 36px 0 0;
+    padding-top: 24px; border-top: 1px solid #1c1c21; }
+  .links a { color: #5b8cff; text-decoration: none; font-size: 0.9rem; }
+  .links a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <main>
+    <nav class="crumb"><a href="../../">Awesome Weekend Repos</a> › derailed/k9s</nav>
+    <h1>derailed/k9s</h1>
+    <p class="promise">Manage Kubernetes clusters in your terminal with fast TUI shortcuts</p>
+    <div class="facts"><span>★ 34.5k</span><span>Apache-2.0 license</span></div>
+    <img class="shot" src="../../assets/thumbs/k9s.webp" alt="derailed/k9s" loading="lazy" />
+    <p class="hook">Stop typing kubectl get pods 500 times a day.</p>
+    <h2>Replace repetitive kubectl commands with one keystroke.</h2>
+    <p>First, stop typing forty-character commands. k9s provides an interactive, real-time terminal dashboard that puts your entire cluster at your fingertips.</p>
+    <p class="note">interactive TUI replaces dozens of kubectl commands</p>
+    <h2>Monitor pods, deployments, and nodes with live metrics.</h2>
+    <p>Second, jump between namespaces and pods instantly. CPU and memory metrics stream live in the terminal so you spot runaway containers immediately.</p>
+    <p class="note">real-time CPU and memory usage from metrics-server</p>
+    <h2>Tail logs and forward ports with a single key.</h2>
+    <p>Third, press l to tail streaming logs, press s to drop straight into a container shell, and shift-f to set up port forwarding in one second.</p>
+    <p class="note">single-key shortcuts: l for logs · s for shell · shift-f</p>
+    <h2>Scan cluster health and detect misconfigurations automatically.</h2>
+    <p>Fourth, built-in cluster sanitization scans your manifests for out-of-date images, missing resource limits, and dead services automatically.</p>
+    <p class="note">built-in sanitization catches missing limits and zombie pods</p>
+    <h2>Over 34,000 engineers rely on k9s every day.</h2>
+    <p>It is completely open source under Apache 2.0, written in Go, with over thirty-four thousand stars on GitHub.</p>
+    <p class="note">34.5k stars · Go · Apache-2.0 · derailed/k9s</p>
+    <div class="links"><a href="https://youtube.com/shorts/LJiKulS9Xlk">Watch on YouTube</a><a href="https://www.instagram.com/reel/Dc_mQtOiHMH/">Watch on Instagram</a><a href="https://github.com/derailed/k9s">View on GitHub</a></div>
+  </main>
+</body>
+</html>

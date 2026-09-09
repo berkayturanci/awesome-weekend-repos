@@ -111,7 +111,7 @@ async function main() {
 }
 
 function escapeRegExp(s) {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return String(s ?? "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 // Same escaping awesome-list.ts uses, kept local so this script has no
