@@ -17,7 +17,7 @@ same source the videos are built from, so it never drifts.
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
 | [eza-community/eza](https://github.com/eza-community/eza) | 21k |  | EUPL-1.2 | Upgrade the 40-year-old ls command with Git status and tree views | [▶ YouTube](https://youtube.com/shorts/al8Efy7oVYw) · [Instagram](https://www.instagram.com/reel/DdCLE2CDm52/) |
-| [derailed/k9s](https://github.com/derailed/k9s) | 34.5k |  | Apache-2.0 | Manage Kubernetes clusters in your terminal with fast TUI shortcuts | [▶ YouTube](https://youtube.com/shorts/LJiKulS9Xlk) · [Instagram](https://www.instagram.com/reel/Dc_mQtOiHMH/) |
+| [derailed/k9s](https://github.com/derailed/k9s) | 34.6k |  | Apache-2.0 | Manage Kubernetes clusters in your terminal with fast TUI shortcuts | [▶ YouTube](https://youtube.com/shorts/LJiKulS9Xlk) · [Instagram](https://www.instagram.com/reel/Dc_mQtOiHMH/) |
 | [sxyazi/yazi](https://github.com/sxyazi/yazi) | 40k |  | MIT | Blazing fast async terminal file manager with inline image previews | [▶ YouTube](https://youtube.com/shorts/FNftWunYunM) |
 | [rtk-ai/rtk](https://github.com/rtk-ai/rtk) | 70k |  | Apache-2.0 | Cut AI coding agent token consumption by 60-90% | [▶ YouTube](https://youtube.com/shorts/HSuTndNI7As) |
 | [yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp) | 177k |  | Unlicense | Download video and audio from thousands of sites cleanly | [▶ YouTube](https://youtube.com/shorts/6TuiNf4RZQM) · [Instagram](https://www.instagram.com/reel/Dc3ss59y7dk/) |
