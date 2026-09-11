@@ -158,7 +158,10 @@
     transform: translateY(0);
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   }
-  .card.tilting { transition: transform 0.08s ease-out, border-color 0.15s ease, box-shadow 0.15s ease; }
+  .card.tilting {
+    transition: transform 0.08s ease-out, border-color 0.15s ease, box-shadow 0.15s ease;
+    transition-delay: 0s !important;
+  }
   .card:hover {
     border-color: rgba(255,255,255,0.22);
     box-shadow: 0 16px 36px rgba(0,0,0,0.65), 0 0 24px rgba(91,140,255,0.18);
@@ -1214,15 +1217,12 @@
   if (reduceMotion) {
     cards.forEach((c) => c.classList.add("in-view"));
   } else if ("IntersectionObserver" in window) {
-    let revealed = 0;
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           const el = entry.target;
-          el.style.transitionDelay = `${Math.min(revealed % 8, 7) * 55}ms`;
           el.classList.add("in-view");
-          revealed++;
           io.unobserve(el);
         });
       },
@@ -1236,7 +1236,10 @@
   if (canHover && !reduceMotion) {
     const MAX_TILT = 10;
     cards.forEach((card) => {
-      card.addEventListener("pointerenter", () => card.classList.add("tilting"));
+      card.addEventListener("pointerenter", () => {
+        card.classList.add("tilting");
+        card.style.transitionDelay = "0s";
+      });
       card.addEventListener("pointermove", (e) => {
         const rect = card.getBoundingClientRect();
         const px = (e.clientX - rect.left) / rect.width;
@@ -1250,6 +1253,7 @@
       card.addEventListener("pointerleave", () => {
         card.classList.remove("tilting");
         card.style.transform = "";
+        card.style.transitionDelay = "";
       });
     });
 
