@@ -129,7 +129,33 @@
   .chip:hover { background: rgba(255,255,255,0.12); color: #f2f2f4; }
   .chip:focus-visible { outline: 2px solid rgba(138,180,255,0.6); outline-offset: 2px; }
   .chip.active { background: rgba(91,140,255,0.18); border-color: rgba(91,140,255,0.55); color: #cddcff; }
-  .result-count { text-align: center; color: #6f6f76; font-size: 0.78rem; margin: 14px 0 -4px; }
+  .controls-row {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1280px; width: calc(100% - 32px); margin: 18px auto 0; padding: 0;
+    animation: fadeInUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.22s both;
+  }
+  .sort-bar {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    padding: 3px 5px; border-radius: 999px;
+  }
+  .sort-label {
+    font-size: 0.74rem; color: #7a7a82; font-weight: 500;
+    margin: 0 4px 0 8px; text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .sort-btn {
+    all: unset; cursor: pointer; box-sizing: border-box;
+    font-size: 0.78rem; padding: 5px 12px; border-radius: 999px;
+    color: #a0a0a8; border: 1px solid transparent;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+  .sort-btn:hover { background: rgba(255,255,255,0.06); color: #f2f2f4; }
+  .sort-btn:focus-visible { outline: 2px solid rgba(138,180,255,0.6); outline-offset: 2px; }
+  .sort-btn.active {
+    background: rgba(91,140,255,0.18); border-color: rgba(91,140,255,0.55);
+    color: #cddcff; font-weight: 500;
+  }
+  .result-count { color: #6f6f76; font-size: 0.78rem; margin: 0; }
   .empty-state { text-align: center; color: #7a7a82; padding: 40px 24px; display: none; }
   .empty-state button {
     all: unset; cursor: pointer; margin-top: 10px; display: inline-block;
@@ -407,6 +433,8 @@
     .dialog-media { max-height: 480px; }
     .newsletter-form { flex-direction: column; }
     .newsletter-form button { text-align: center; }
+    .controls-row { flex-direction: column; gap: 10px; align-items: center; text-align: center; }
+    .sort-bar { flex-wrap: wrap; justify-content: center; }
   }
   footer { text-align: center; padding: 24px; color: #6f6f76; font-size: 0.85rem; }
   /* Real <a> links to every detail page. The grid above is buttons that open a
@@ -514,7 +542,15 @@
     <button class="chip" data-lang="Swift" aria-pressed="false">Swift (1)</button>
     <button class="chip" data-lang="PHP" aria-pressed="false">PHP (1)</button>
   </div>
-  <p class="result-count" id="resultCount"></p>
+  <div class="controls-row">
+    <div class="sort-bar" id="sortBar" role="group" aria-label="Sort repos">
+      <span class="sort-label">Sort:</span>
+      <button class="sort-btn active" data-sort="latest" aria-pressed="true">Latest</button>
+      <button class="sort-btn" data-sort="stars" aria-pressed="false">Most Stars ★</button>
+      <button class="sort-btn" data-sort="name" aria-pressed="false">Name (A–Z)</button>
+    </div>
+    <p class="result-count" id="resultCount"></p>
+  </div>
 
   <main class="grid" id="grid">
 
@@ -1133,8 +1169,12 @@
   const clearFiltersBtn = document.getElementById("clearFilters");
   const cards = Array.from(document.querySelectorAll(".card"));
   const chips = Array.from(document.querySelectorAll(".chip"));
+  const sortButtons = Array.from(document.querySelectorAll(".sort-btn"));
+  const grid = document.getElementById("grid");
 
   let activeLang = "";
+  let activeSort = "latest";
+
   function setActiveChip(lang) {
     activeLang = lang;
     chips.forEach((chip) => {
@@ -1143,47 +1183,105 @@
       chip.setAttribute("aria-pressed", String(on));
     });
   }
-  // Keeps the active language filter in the URL hash — a filtered link is
-  // shareable/bookmarkable, and reloading keeps you where you were.
-  function syncHash() {
-    const hash = activeLang ? `#lang=${encodeURIComponent(activeLang)}` : "";
-    history.replaceState(null, "", location.pathname + location.search + hash);
+
+  function setActiveSort(sort) {
+    activeSort = sort;
+    sortButtons.forEach((btn) => {
+      const on = (btn.dataset.sort || "") === sort;
+      btn.classList.toggle("active", on);
+      btn.setAttribute("aria-pressed", String(on));
+    });
   }
-  function applyFilters() {
+
+  function parseStars(s) {
+    if (!s) return 0;
+    const str = String(s).replace(/[^\d.kmKM]/g, "").trim().toLowerCase();
+    if (str.endsWith("k")) return parseFloat(str) * 1000;
+    if (str.endsWith("m")) return parseFloat(str) * 1000000;
+    return parseFloat(str) || 0;
+  }
+
+  // Keeps active language and sort filter in URL hash
+  function syncHash() {
+    const params = new URLSearchParams();
+    if (activeLang) params.set("lang", activeLang);
+    if (activeSort && activeSort !== "latest") params.set("sort", activeSort);
+    const qs = params.toString();
+    history.replaceState(null, "", qs ? "#" + qs : location.pathname + location.search);
+  }
+
+  function applyFiltersAndSort() {
     const q = searchInput.value.trim().toLowerCase();
     let visible = 0;
-    cards.forEach((card, i) => {
-      const r = REPOS[i];
+
+    cards.forEach((card) => {
+      const idx = Number(card.dataset.index);
+      const r = REPOS[idx];
       const matchesSearch = !q || [r.fullName, r.language, r.promise].join(" ").toLowerCase().includes(q);
       const matchesLang = !activeLang || r.language === activeLang;
       const match = matchesSearch && matchesLang;
       card.classList.toggle("hidden", !match);
       if (match) visible++;
     });
+
+    const sorted = [...cards].sort((a, b) => {
+      const idxA = Number(a.dataset.index);
+      const idxB = Number(b.dataset.index);
+      const repoA = REPOS[idxA];
+      const repoB = REPOS[idxB];
+
+      if (activeSort === "stars") {
+        return parseStars(repoB.stars) - parseStars(repoA.stars);
+      }
+      if (activeSort === "name") {
+        return (repoA.fullName || "").localeCompare(repoB.fullName || "");
+      }
+      return idxA - idxB;
+    });
+
+    sorted.forEach((card) => grid.appendChild(card));
+
     emptyState.style.display = visible ? "none" : "block";
-    resultCount.textContent = visible && (q || activeLang) ? `Showing ${visible} of ${cards.length}` : "";
+    resultCount.textContent = visible && (q || activeLang || activeSort !== "latest") ? `Showing ${visible} of ${cards.length}` : "";
   }
-  searchInput.addEventListener("input", applyFilters);
+
+  searchInput.addEventListener("input", applyFiltersAndSort);
   chips.forEach((chip) => {
     chip.addEventListener("click", () => {
       setActiveChip(chip.dataset.lang || "");
       syncHash();
-      applyFilters();
+      applyFiltersAndSort();
+    });
+  });
+  sortButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setActiveSort(btn.dataset.sort || "latest");
+      syncHash();
+      applyFiltersAndSort();
     });
   });
   clearFiltersBtn.addEventListener("click", () => {
     searchInput.value = "";
     setActiveChip("");
+    setActiveSort("latest");
     syncHash();
-    applyFilters();
+    applyFiltersAndSort();
   });
 
-  // Restore a #lang=Go style link on load.
-  const hashLang = decodeURIComponent(location.hash.replace(/^#lang=/, ""));
-  if (hashLang && chips.some((c) => c.dataset.lang === hashLang)) {
-    setActiveChip(hashLang);
+  // Restore a #lang=Go or #sort=stars style link on load.
+  const hashRaw = location.hash.replace(/^#/, "");
+  if (hashRaw) {
+    const params = new URLSearchParams(hashRaw);
+    const hashLang = params.get("lang") || (!hashRaw.includes("=") ? decodeURIComponent(hashRaw) : "");
+    const hashSort = params.get("sort");
+    if (hashLang && chips.some((c) => c.dataset.lang === hashLang)) {
+      setActiveChip(hashLang);
+    }
+    if (hashSort && ["latest", "stars", "name"].includes(hashSort)) {
+      setActiveSort(hashSort);
+    }
   }
-  applyFilters();
+  applyFiltersAndSort();
 
   const newsletterForm = document.getElementById("newsletterForm");
   const newsletterEmail = document.getElementById("newsletterEmail");
