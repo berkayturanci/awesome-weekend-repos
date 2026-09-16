@@ -1280,6 +1280,17 @@
 
   const NEWSLETTER_API = window.AW_NEWSLETTER_API || "https://weekendrepos-newsletter.berkayturanci.workers.dev/subscribe";
 
+  // Check if visitor arrived from an email confirmation link
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("confirmed") === "1" || urlParams.get("confirmed") === "true") {
+      newsletterMsg.textContent = "✓ Subscription confirmed! You're all set to receive weekend repos.";
+      newsletterMsg.classList.remove("error");
+      newsletterMsg.style.display = "block";
+      newsletterForm.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  } catch (_) {}
+
   newsletterForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const email = newsletterEmail.value.trim();
@@ -1288,7 +1299,7 @@
 
     newsletterBtn.disabled = true;
     const origText = newsletterBtn.textContent;
-    newsletterBtn.textContent = "Subscribing…";
+    newsletterBtn.textContent = "Sending…";
     newsletterMsg.style.display = "none";
     newsletterMsg.classList.remove("error");
 
@@ -1302,8 +1313,8 @@
       const data = await resp.json().catch(() => ({}));
 
       if (resp.ok && (data.success || resp.status === 200)) {
-        newsletterBtn.textContent = "Subscribed!";
-        newsletterMsg.textContent = data.message || ("✓ You're on the list (" + email + ")! We'll send the next repo this Saturday morning.");
+        newsletterBtn.textContent = data.doubleOptIn ? "Check Inbox!" : "Subscribed!";
+        newsletterMsg.textContent = data.message || ("Please check your inbox (" + email + ") to confirm your subscription!");
         newsletterMsg.style.display = "block";
         newsletterEmail.value = "";
         try {
