@@ -73,7 +73,7 @@
     from { opacity: 0; transform: translateY(14px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  header, .search-wrap, .filter-bar, .grid, .newsletter-wrap, footer {
+  header, .top-newsletter-wrap, .search-wrap, .filter-bar, .grid, .newsletter-wrap, footer {
     position: relative;
     z-index: 10;
   }
@@ -430,6 +430,126 @@
     color: #f87171;
   }
 
+  /* --- top compact newsletter bar --- */
+  .top-newsletter-wrap {
+    max-width: 800px;
+    width: calc(100% - 32px);
+    margin: 0 auto 22px;
+    padding: 0;
+  }
+  .top-newsletter-card {
+    background: linear-gradient(135deg, rgba(28, 30, 42, 0.72) 0%, rgba(16, 17, 23, 0.82) 100%);
+    border: 1px solid rgba(91, 140, 255, 0.22);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35), 0 0 16px rgba(91,140,255,0.08);
+    border-radius: 16px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    backdrop-filter: blur(12px);
+  }
+  .top-newsletter-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+  .top-newsletter-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .top-newsletter-text {
+    font-size: 0.86rem;
+    color: #cbd5e1;
+    line-height: 1.4;
+  }
+  .top-newsletter-text strong {
+    color: #ffffff;
+    font-weight: 700;
+  }
+  .top-newsletter-form-col {
+    flex-shrink: 0;
+  }
+  .top-newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .top-newsletter-form input {
+    width: 220px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #f2f2f4;
+    font-size: 0.86rem;
+    outline: none;
+    transition: border-color 0.15s ease;
+  }
+  .top-newsletter-form input:focus { border-color: #5b8cff; }
+  .top-newsletter-form button {
+    all: unset;
+    cursor: pointer;
+    background: #5b8cff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.86rem;
+    padding: 8px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(91,140,255,0.35);
+    transition: background 0.15s ease, transform 0.15s ease;
+    white-space: nowrap;
+  }
+  .top-newsletter-form button:hover {
+    background: #7ca5ff;
+    transform: translateY(-1px);
+  }
+  .top-newsletter-msg {
+    display: none;
+    font-size: 0.8rem;
+    color: #a3e635;
+    font-weight: 600;
+    margin-top: 6px;
+    text-align: right;
+  }
+  .top-newsletter-msg.error {
+    color: #f87171;
+  }
+
+  @media (max-width: 680px) {
+    .top-newsletter-card {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+      padding: 14px 16px;
+      text-align: center;
+    }
+    .top-newsletter-info {
+      justify-content: center;
+    }
+    .top-newsletter-form-col {
+      width: 100%;
+    }
+    .top-newsletter-form {
+      flex-direction: column;
+      width: 100%;
+    }
+    .top-newsletter-form input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .top-newsletter-form button {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .top-newsletter-msg {
+      text-align: center;
+    }
+  }
+
   @media (max-width: 600px) {
     .grid {
       grid-template-columns: 1fr;
@@ -533,6 +653,25 @@
     <p>One open-source repo a weekend, explained in under a minute — curated by
       <a href="https://youtube.com/@weekendrepos">@weekendrepos</a>. Tap a repo for the review + links.</p>
   </header>
+
+  <div class="top-newsletter-wrap">
+    <div class="top-newsletter-card">
+      <div class="top-newsletter-info">
+        <span class="top-newsletter-icon" aria-hidden="true">📬</span>
+        <div class="top-newsletter-text">
+          <strong>Weekly Repo Digest:</strong> One curated open-source gem every Saturday.
+        </div>
+      </div>
+      <div class="top-newsletter-form-col">
+        <form class="top-newsletter-form" id="topNewsletterForm">
+          <input type="text" name="hp" id="topNewsletterHp" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="email" id="topNewsletterEmail" placeholder="your.email@company.com" required aria-label="Your email address" />
+          <button type="submit" id="topNewsletterBtn">Subscribe</button>
+        </form>
+        <div class="top-newsletter-msg" id="topNewsletterMsg"></div>
+      </div>
+    </div>
+  </div>
 
   <div class="search-wrap">
     <input type="search" id="search" placeholder="Search by name or language…" aria-label="Search repos" />
@@ -1300,55 +1439,61 @@
   }
   applyFiltersAndSort();
 
-  const newsletterForm = document.getElementById("newsletterForm");
-  const newsletterEmail = document.getElementById("newsletterEmail");
-  const newsletterHp = document.getElementById("newsletterHp");
-  const newsletterMsg = document.getElementById("newsletterMsg");
-  const newsletterBtn = document.getElementById("newsletterBtn");
-
   const NEWSLETTER_API = window.AW_NEWSLETTER_API || "https://weekendrepos-newsletter.berkayturanci.workers.dev/subscribe";
 
-  newsletterForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const email = newsletterEmail.value.trim();
-    if (!email) return;
-    const hp = newsletterHp ? newsletterHp.value : "";
+  function attachNewsletterHandler(formId, emailId, hpId, btnId, msgId) {
+    const form = document.getElementById(formId);
+    const emailInput = document.getElementById(emailId);
+    const hpInput = document.getElementById(hpId);
+    const btn = document.getElementById(btnId);
+    const msg = document.getElementById(msgId);
+    if (!form || !emailInput || !btn || !msg) return;
 
-    newsletterBtn.disabled = true;
-    const origText = newsletterBtn.textContent;
-    newsletterBtn.textContent = "Subscribing…";
-    newsletterMsg.style.display = "none";
-    newsletterMsg.classList.remove("error");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+      if (!email) return;
+      const hp = hpInput ? hpInput.value : "";
 
-    try {
-      const resp = await fetch(NEWSLETTER_API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, hp }),
-      });
+      btn.disabled = true;
+      const origText = btn.textContent;
+      btn.textContent = "Subscribing…";
+      msg.style.display = "none";
+      msg.classList.remove("error");
 
-      const data = await resp.json().catch(() => ({}));
+      try {
+        const resp = await fetch(NEWSLETTER_API, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, hp }),
+        });
 
-      if (resp.ok && (data.success || resp.status === 200)) {
-        newsletterBtn.textContent = "Subscribed!";
-        newsletterMsg.textContent = data.message || ("✓ You're on the list (" + email + ")! We'll send the next repo this Saturday morning.");
-        newsletterMsg.style.display = "block";
-        newsletterEmail.value = "";
-        try {
-          localStorage.setItem("aw_subscribed_email", email);
-        } catch (_) {}
-      } else {
-        throw new Error(data.error || "Could not complete subscription. Please check your email and try again.");
+        const data = await resp.json().catch(() => ({}));
+
+        if (resp.ok && (data.success || resp.status === 200)) {
+          btn.textContent = "Subscribed!";
+          msg.textContent = data.message || ("✓ Check your inbox to confirm (" + email + ")!");
+          msg.style.display = "block";
+          emailInput.value = "";
+          try {
+            localStorage.setItem("aw_subscribed_email", email);
+          } catch (_) {}
+        } else {
+          throw new Error(data.error || "Could not complete subscription. Please check your email and try again.");
+        }
+      } catch (err) {
+        console.warn("Newsletter subscription notice:", err);
+        btn.disabled = false;
+        btn.textContent = origText;
+        msg.textContent = err.message || "Could not connect to subscription service. Please try again.";
+        msg.classList.add("error");
+        msg.style.display = "block";
       }
-    } catch (err) {
-      console.warn("Newsletter subscription notice:", err);
-      newsletterBtn.disabled = false;
-      newsletterBtn.textContent = origText;
-      newsletterMsg.textContent = err.message || "Could not connect to subscription service. Please try again.";
-      newsletterMsg.classList.add("error");
-      newsletterMsg.style.display = "block";
-    }
-  });
+    });
+  }
+
+  attachNewsletterHandler("topNewsletterForm", "topNewsletterEmail", "topNewsletterHp", "topNewsletterBtn", "topNewsletterMsg");
+  attachNewsletterHandler("newsletterForm", "newsletterEmail", "newsletterHp", "newsletterBtn", "newsletterMsg");
 
   // ---- motion: scroll-in reveal, cursor tilt + glare, ambient glow ----
   // All gated on a real mouse (hover:hover + pointer:fine) and on the user
