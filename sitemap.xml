@@ -2,306 +2,312 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://berkayturanci.github.io/awesome-weekend-repos/</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/bubbletea/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/OpenBB-finance/OpenBB/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/charmbracelet/bubbletea/</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/pake/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/tw93/Pake/</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/duckdb/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/duckdb/duckdb/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/zellij/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/zellij-org/zellij/</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/atuin/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/atuinsh/atuin/</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/croc/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/schollz/croc/</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/httpie/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/httpie/cli/</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/starship/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/starship/starship/</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/zoxide/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/ajeetdsouza/zoxide/</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/claude-obsidian/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/AgriciDaniel/claude-obsidian/</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/spec-kit/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/github/spec-kit/</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/prime-agent/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/PrimeIntellect-ai/prime-agent/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/limbo/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/tursodatabase/limbo/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/reverse-skill/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/zhaoxuya520/reverse-skill/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/caveman/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/JuliusBrussee/caveman/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/bumblebee/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/perplexityai/bumblebee/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/syncthing/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/syncthing/syncthing/</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/open-code-review/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/alibaba/open-code-review/</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/moneyprinterturbo/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/harry0703/MoneyPrinterTurbo/</loc>
     <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/uv/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/astral-sh/uv/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/agent-skills/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/addyosmani/agent-skills/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/strix/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/usestrix/strix/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/diagram-design/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/cathrynlavery/diagram-design/</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/agent-reach/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/Panniantong/Agent-Reach/</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/career-ops/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/santifer/career-ops/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/openhands/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/OpenHands/OpenHands/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/firecrawl/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/mendableai/firecrawl/</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/n8n/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/n8n-io/n8n/</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/aider/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/Aider-AI/aider/</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/airllm/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/lyogavin/airllm/</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/hoppscotch/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/hoppscotch/hoppscotch/</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/ai-jury/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/berkayturanci/ai-jury/</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/turbo-fieldfare/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/drumih/turbo-fieldfare/</loc>
     <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/worldmonitor/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/koala73/worldmonitor/</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/act/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/nektos/act/</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/omniroute/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/diegosouzapw/OmniRoute/</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/code-review-graph/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/tirth8205/code-review-graph/</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/hermes-agent/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/NousResearch/hermes-agent/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/orca/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/stablyai/orca/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/ego-lite/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/citrolabs/ego-lite/</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/weekend-toolkit/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/ajeetdsouza/zoxide/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/lazygit/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/jesseduffield/lazygit/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/opencut/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/OpenCut-app/OpenCut/</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/bat/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/sharkdp/bat/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/fzf/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/junegunn/fzf/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/ripgrep/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/BurntSushi/ripgrep/</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/pocketbase/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/pocketbase/pocketbase/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/coolify/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/coollabsio/coolify/</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/ollama/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/ollama/ollama/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/caddy/</loc>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/caddyserver/caddy/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
