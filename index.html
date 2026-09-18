@@ -517,6 +517,17 @@
   .top-newsletter-msg.error {
     color: #f87171;
   }
+  .cancel-sub-trigger {
+    color: #f87171 !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    margin-left: 4px;
+    transition: opacity 0.15s ease;
+  }
+  .cancel-sub-trigger:hover {
+    opacity: 0.8;
+  }
 
   @media (max-width: 680px) {
     .top-newsletter-card {
@@ -1480,13 +1491,53 @@
         const data = await resp.json().catch(() => ({}));
 
         if (resp.ok && (data.success || resp.status === 200)) {
-          btn.textContent = "Subscribed!";
-          msg.textContent = data.message || ("✓ Check your inbox to confirm (" + email + ")!");
-          msg.style.display = "block";
-          emailInput.value = "";
-          try {
-            localStorage.setItem("aw_subscribed_email", email);
-          } catch (_) {}
+          if (data.alreadySubscribed) {
+            btn.textContent = "Subscribed";
+            btn.disabled = false;
+            msg.className = msgId + " success already-subscribed";
+            msg.innerHTML = "You're already on the list! &middot; <a href='#cancel' class='cancel-sub-trigger'>Cancel subscription?</a>";
+            msg.style.display = "block";
+
+            const cancelTrigger = msg.querySelector(".cancel-sub-trigger");
+            if (cancelTrigger) {
+              cancelTrigger.addEventListener("click", async (ev) => {
+                ev.preventDefault();
+                if (!confirm("Are you sure you want to cancel your Weekend Repos newsletter subscription for " + email + "?")) {
+                  return;
+                }
+                cancelTrigger.textContent = "Canceling…";
+                try {
+                  const unsubUrl = NEWSLETTER_API.replace("/subscribe", "/unsubscribe");
+                  const unsubResp = await fetch(unsubUrl, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                    body: JSON.stringify({ email }),
+                  });
+                  const unsubData = await unsubResp.json().catch(() => ({}));
+                  if (unsubResp.ok && (unsubData.success || unsubResp.status === 200)) {
+                    msg.innerHTML = '<span style="color: #94a3b8;">✓ Successfully unsubscribed (' + email + '). You can resubscribe anytime.</span>';
+                    btn.textContent = origText;
+                    emailInput.value = "";
+                    try { localStorage.removeItem("aw_subscribed_email"); } catch (_) {}
+                  } else {
+                    throw new Error(unsubData.error || "Could not cancel subscription. Please try again.");
+                  }
+                } catch (unsubErr) {
+                  alert(unsubErr.message || "Could not cancel subscription. Please try again.");
+                  cancelTrigger.textContent = "Cancel subscription?";
+                }
+              });
+            }
+          } else {
+            btn.textContent = "Subscribed!";
+            msg.className = msgId + " success";
+            msg.textContent = data.message || ("✓ Check your inbox to confirm (" + email + ")!");
+            msg.style.display = "block";
+            emailInput.value = "";
+            try {
+              localStorage.setItem("aw_subscribed_email", email);
+            } catch (_) {}
+          }
         } else {
           throw new Error(data.error || "Could not complete subscription. Please check your email and try again.");
         }
