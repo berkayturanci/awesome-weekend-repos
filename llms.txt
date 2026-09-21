@@ -13,7 +13,6 @@
 
 ## Curated Repositories
 
-- [penpot/penpot](https://berkayturanci.github.io/awesome-weekend-repos/repos/penpot/penpot/): Five developer repos that upgrade your workflow and cut SaaS costs. (Language: Clojure) [MPL-2.0] · [GitHub](https://github.com/penpot/penpot) · [YouTube](https://youtube.com/shorts/bmEkbbc_kMI)
 - [OpenBB-finance/OpenBB](https://berkayturanci.github.io/awesome-weekend-repos/repos/OpenBB-finance/OpenBB/): The open source Bloomberg Terminal alternative for analysts and quants (Language: Python) [AGPL-3.0] · [GitHub](https://github.com/OpenBB-finance/OpenBB) · [YouTube](https://youtube.com/shorts/eN0Vk8MFBvs)
 - [charmbracelet/bubbletea](https://berkayturanci.github.io/awesome-weekend-repos/repos/charmbracelet/bubbletea/): Build modern reactive terminal user interfaces in Go using Elm (Language: Go) [MIT] · [GitHub](https://github.com/charmbracelet/bubbletea) · [YouTube](https://youtube.com/shorts/Jq-FmF-fkGI)
 - [tw93/Pake](https://berkayturanci.github.io/awesome-weekend-repos/repos/tw93/Pake/): Turn any webpage into a tiny desktop app with Rust and Tauri (Language: Rust) [GPL-3.0] · [GitHub](https://github.com/tw93/Pake) · [YouTube](https://youtube.com/shorts/0pm7DSbb_jU)
