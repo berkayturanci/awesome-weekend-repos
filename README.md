@@ -16,6 +16,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
+| [penpot/penpot](https://github.com/penpot/penpot) | 60k | Clojure | MPL-2.0 | Five developer repos that upgrade your workflow and cut SaaS costs. | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/penpot/penpot/) · [▶ YouTube](https://youtube.com/shorts/bmEkbbc_kMI) |
 | [OpenBB-finance/OpenBB](https://github.com/OpenBB-finance/OpenBB) | 73.5k | Python | AGPL-3.0 | The open source Bloomberg Terminal alternative for analysts and quants | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/OpenBB-finance/OpenBB/) · [▶ YouTube](https://youtube.com/shorts/eN0Vk8MFBvs) |
 | [charmbracelet/bubbletea](https://github.com/charmbracelet/bubbletea) | 44.9k | Go | MIT | Build modern reactive terminal user interfaces in Go using Elm | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/charmbracelet/bubbletea/) · [▶ YouTube](https://youtube.com/shorts/Jq-FmF-fkGI) |
 | [tw93/Pake](https://github.com/tw93/Pake) | 61k | Rust | GPL-3.0 | Turn any webpage into a tiny desktop app with Rust and Tauri | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/tw93/Pake/) · [▶ YouTube](https://youtube.com/shorts/0pm7DSbb_jU) |
