@@ -206,6 +206,43 @@
     font-size: 0.78rem; color: #7f7f88;
   }
 
+  /* --- Breadcrumbs --- */
+  .breadcrumbs {
+    display: flex; align-items: center; gap: 8px; font-size: 0.82rem;
+    color: #8b8b99; margin: 0 0 12px; font-weight: 500;
+  }
+  .breadcrumbs a {
+    color: #5b8cff; text-decoration: none; transition: color 0.15s ease;
+  }
+  .breadcrumbs a:hover { color: #8ab0ff; text-decoration: underline; }
+  .breadcrumbs span.sep { color: #555562; }
+  .breadcrumbs span.current { color: #c4c4d0; }
+
+  /* --- Adjacent Repository Mesh Navigation --- */
+  .repo-nav {
+    margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  .repo-nav-card {
+    display: flex; flex-direction: column; gap: 4px; padding: 14px 16px;
+    border-radius: 12px; background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08); text-decoration: none;
+    transition: all 0.15s ease;
+  }
+  .repo-nav-card:hover {
+    background: rgba(255, 255, 255, 0.07); border-color: rgba(91, 140, 255, 0.35);
+    transform: translateY(-2px);
+  }
+  .repo-nav-label {
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;
+    color: #8b8b99; font-weight: 600;
+  }
+  .repo-nav-title {
+    font-size: 0.92rem; font-weight: 700; color: #f2f2f4;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .repo-nav-next { text-align: right; }
+
   /* --- Responsive --- */
   @media (max-width: 860px) {
     .detail-card {
@@ -214,6 +251,10 @@
     .media-col {
       max-width: 360px; margin: 0 auto; width: 100%; position: static;
     }
+  }
+  @media (max-width: 600px) {
+    .repo-nav { grid-template-columns: 1fr; }
+    .repo-nav-next { text-align: left; }
   }
 </style>
 </head>
@@ -259,6 +300,12 @@
       </div>
 
       <div class="content-col">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../../../">All Repos</a>
+          <span class="sep">/</span>
+          <span class="current">zhaoxuya520/reverse-skill</span>
+        </nav>
+
         <h1>zhaoxuya520/reverse-skill</h1>
         
         <div class="meta-date">
@@ -306,6 +353,17 @@
           </div>
           
         </div>
+
+        <nav class="repo-nav" aria-label="Adjacent Repositories">
+          <a class="repo-nav-card repo-nav-prev" href="../../../repos/tursodatabase/limbo/">
+            <span class="repo-nav-label">← Previous Repo</span>
+            <span class="repo-nav-title">tursodatabase/limbo</span>
+          </a>
+          <a class="repo-nav-card repo-nav-next" href="../../../repos/JuliusBrussee/caveman/">
+            <span class="repo-nav-label">Next Repo →</span>
+            <span class="repo-nav-title">JuliusBrussee/caveman</span>
+          </a>
+        </nav>
       </div>
     </article>
   </main>
