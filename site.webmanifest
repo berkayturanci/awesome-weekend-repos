@@ -1,0 +1,39 @@
+{
+  "name": "Awesome Weekend Repos",
+  "short_name": "Weekend Repos",
+  "description": "A curated list of useful open-source developer tools — one repo a weekend, each explained in an under-a-minute video. Discover CLI tools, self-hosting, and developer productivity repos with links to watch on YouTube and Instagram.",
+  "start_url": "https://berkayturanci.github.io/awesome-weekend-repos/",
+  "scope": "https://berkayturanci.github.io/awesome-weekend-repos/",
+  "display": "standalone",
+  "background_color": "#0b0b0d",
+  "theme_color": "#0b0b0d",
+  "icons": [
+    {
+      "src": "favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
