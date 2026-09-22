@@ -18,12 +18,13 @@
 <script>
   (function() {
     try {
-      var saved = localStorage.getItem('aw_theme');
-      var systemTheme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
-      var theme = saved || systemTheme;
-      document.documentElement.setAttribute('data-theme', theme);
+      var saved = localStorage.getItem('aw_theme') || 'auto';
+      var systemIsLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      var activeTheme = saved === 'auto' ? (systemIsLight ? 'light' : 'dark') : saved;
+      document.documentElement.setAttribute('data-theme', activeTheme);
+      document.documentElement.setAttribute('data-theme-mode', saved);
       var meta = document.getElementById('themeColorMeta404');
-      if (meta) meta.setAttribute('content', theme === 'light' ? '#f8fafc' : '#0b0b0d');
+      if (meta) meta.setAttribute('content', activeTheme === 'light' ? '#f8fafc' : '#0b0b0d');
     } catch(e) {}
   })();
 </script>

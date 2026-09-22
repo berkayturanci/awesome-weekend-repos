@@ -42,12 +42,13 @@
 <script>
   (function() {
     try {
-      var saved = localStorage.getItem('aw_theme');
-      var systemTheme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
-      var theme = saved || systemTheme;
-      document.documentElement.setAttribute('data-theme', theme);
+      var saved = localStorage.getItem('aw_theme') || 'auto';
+      var systemIsLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      var activeTheme = saved === 'auto' ? (systemIsLight ? 'light' : 'dark') : saved;
+      document.documentElement.setAttribute('data-theme', activeTheme);
+      document.documentElement.setAttribute('data-theme-mode', saved);
       var meta = document.getElementById('themeColorMeta');
-      if (meta) meta.setAttribute('content', theme === 'light' ? '#f8fafc' : '#0b0b0d');
+      if (meta) meta.setAttribute('content', activeTheme === 'light' ? '#f8fafc' : '#0b0b0d');
     } catch(e) {}
   })();
 </script>
@@ -816,10 +817,11 @@
     border-color: var(--toggle-hover-border);
     transform: scale(1.06);
   }
-  .sun-icon { display: inline-block; line-height: 1; }
-  .moon-icon { display: none; line-height: 1; }
-  html[data-theme="light"] .sun-icon { display: none; }
-  html[data-theme="light"] .moon-icon { display: inline-block; }
+  .theme-icon { display: none; line-height: 1; font-size: 1.15rem; }
+  html[data-theme-mode="auto"] .icon-auto { display: inline-block; }
+  html[data-theme-mode="light"] .icon-light { display: inline-block; }
+  html[data-theme-mode="dark"] .icon-dark { display: inline-block; }
+  html:not([data-theme-mode]) .icon-auto { display: inline-block; }
 
   @media (max-width: 680px) {
     .theme-toggle-btn {
@@ -956,9 +958,10 @@
     <div class="star star-ltr" style="top:91%; width:3px; height:3px; background:#38bdf8; box-shadow: 0 0 6px 2px #38bdf8, 0 0 14px 4px rgba(91,140,255,0.7); animation-duration:30s; animation-delay:-26s; --peak:0.90;"></div>
     <div class="star star-rtl" style="top:17%; width:4px; height:4px; background:#818cf8; box-shadow: 0 0 6px 2px #818cf8, 0 0 14px 4px rgba(91,140,255,0.7); animation-duration:37s; animation-delay:-36s; --peak:1.00;"></div>
   </div>
-  <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Toggle light/dark mode">
-    <span class="sun-icon" aria-hidden="true">☀️</span>
-    <span class="moon-icon" aria-hidden="true">🌙</span>
+  <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme (Auto / Light / Dark)" title="Theme: System (Auto)">
+    <span class="theme-icon icon-auto" aria-hidden="true">💻</span>
+    <span class="theme-icon icon-light" aria-hidden="true">☀️</span>
+    <span class="theme-icon icon-dark" aria-hidden="true">🌙</span>
   </button>
   <header>
     <div class="logo-mark" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M9 10 L15 16 L9 22" fill="none" stroke="#5b8cff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -2026,23 +2029,44 @@
   }
 
   const themeToggle = document.getElementById("themeToggle");
+  function applyThemeMode(mode) {
+    const systemIsLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    const resolved = mode === 'auto' ? (systemIsLight ? 'light' : 'dark') : mode;
+    document.documentElement.setAttribute('data-theme', resolved);
+    document.documentElement.setAttribute('data-theme-mode', mode);
+    const meta = document.getElementById("themeColorMeta");
+    if (meta) meta.setAttribute("content", resolved === "light" ? "#f8fafc" : "#0b0b0d");
+    if (themeToggle) {
+      if (mode === 'auto') {
+        themeToggle.title = 'Theme: System (Auto) — click for Light';
+        themeToggle.setAttribute('aria-label', 'Theme: System (Auto) — click for Light');
+      } else if (mode === 'light') {
+        themeToggle.title = 'Theme: Light — click for Dark';
+        themeToggle.setAttribute('aria-label', 'Theme: Light — click for Dark');
+      } else {
+        themeToggle.title = 'Theme: Dark — click for System (Auto)';
+        themeToggle.setAttribute('aria-label', 'Theme: Dark — click for System (Auto)');
+      }
+    }
+  }
+
   if (themeToggle) {
+    const currentMode = document.documentElement.getAttribute("data-theme-mode") || localStorage.getItem("aw_theme") || "auto";
+    applyThemeMode(currentMode);
+
     themeToggle.addEventListener("click", () => {
-      const cur = document.documentElement.getAttribute("data-theme") || "dark";
-      const next = cur === "light" ? "dark" : "light";
-      document.documentElement.setAttribute("data-theme", next);
-      const meta = document.getElementById("themeColorMeta");
-      if (meta) meta.setAttribute("content", next === "light" ? "#f8fafc" : "#0b0b0d");
-      try { localStorage.setItem("aw_theme", next); } catch (e) {}
+      const mode = document.documentElement.getAttribute("data-theme-mode") || "auto";
+      const nextMode = mode === "auto" ? "light" : (mode === "light" ? "dark" : "auto");
+      try { localStorage.setItem("aw_theme", nextMode); } catch (e) {}
+      applyThemeMode(nextMode);
     });
   }
+
   if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
-      if (!localStorage.getItem('aw_theme')) {
-        const next = e.matches ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        const meta = document.getElementById('themeColorMeta');
-        if (meta) meta.setAttribute('content', next === 'light' ? '#f8fafc' : '#0b0b0d');
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', () => {
+      const mode = document.documentElement.getAttribute("data-theme-mode") || localStorage.getItem("aw_theme") || "auto";
+      if (mode === "auto") {
+        applyThemeMode("auto");
       }
     });
   }
