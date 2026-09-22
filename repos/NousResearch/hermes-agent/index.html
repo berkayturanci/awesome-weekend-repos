@@ -37,7 +37,8 @@
   (function() {
     try {
       var saved = localStorage.getItem('aw_theme');
-      var theme = saved || 'dark';
+      var systemTheme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+      var theme = saved || systemTheme;
       document.documentElement.setAttribute('data-theme', theme);
       var meta = document.getElementById('themeColorMetaDetail');
       if (meta) meta.setAttribute('content', theme === 'light' ? '#f8fafc' : '#0b0b0d');
@@ -580,6 +581,16 @@
         const meta = document.getElementById("themeColorMetaDetail");
         if (meta) meta.setAttribute("content", next === "light" ? "#f8fafc" : "#0b0b0d");
         try { localStorage.setItem("aw_theme", next); } catch (e) {}
+      });
+    }
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('aw_theme')) {
+          const next = e.matches ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          const meta = document.getElementById('themeColorMetaDetail');
+          if (meta) meta.setAttribute('content', next === 'light' ? '#f8fafc' : '#0b0b0d');
+        }
       });
     }
     

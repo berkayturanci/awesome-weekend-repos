@@ -19,7 +19,8 @@
   (function() {
     try {
       var saved = localStorage.getItem('aw_theme');
-      var theme = saved || 'dark';
+      var systemTheme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+      var theme = saved || systemTheme;
       document.documentElement.setAttribute('data-theme', theme);
       var meta = document.getElementById('themeColorMeta404');
       if (meta) meta.setAttribute('content', theme === 'light' ? '#f8fafc' : '#0b0b0d');
