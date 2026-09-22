@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>starship — The Rust prompt that makes your terminal fast, clean, and gorgeous</title>
+<title>starship/starship — The Rust prompt that makes your terminal fast, clean, and gorgeous</title>
 <meta name="description" content="The Rust prompt that makes your terminal fast, clean, and gorgeous" />
 <meta name="keywords" content="starship/starship, starship, Rust, weekend repos, open source" />
 <meta name="author" content="Berkay Turancı" />
@@ -13,7 +13,7 @@
 <link rel="canonical" href="https://berkayturanci.github.io/awesome-weekend-repos/repos/starship/starship/" />
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Awesome Weekend Repos" />
-<meta property="og:title" content="starship — The Rust prompt that makes your terminal fast, clean, and gorgeous" />
+<meta property="og:title" content="starship/starship — The Rust prompt that makes your terminal fast, clean, and gorgeous" />
 <meta property="og:description" content="The Rust prompt that makes your terminal fast, clean, and gorgeous" />
 <meta property="og:url" content="https://berkayturanci.github.io/awesome-weekend-repos/repos/starship/starship/" />
 <meta property="og:locale" content="en_US" />
@@ -176,6 +176,82 @@
   .pill-stars {
     color: #f5c451; border-color: rgba(245, 196, 81, 0.3); background: rgba(245, 196, 81, 0.1); font-weight: 600;
   }
+  .pill-savings, .pill-replaces {
+    color: #38ef7d !important; border-color: rgba(56, 239, 125, 0.3) !important; background: rgba(56, 239, 125, 0.1) !important; font-weight: 600;
+  }
+  .total-savings-callout {
+    background: linear-gradient(135deg, rgba(56, 239, 125, 0.12) 0%, rgba(17, 153, 142, 0.08) 100%);
+    border: 1px solid rgba(56, 239, 125, 0.35);
+    border-radius: 16px;
+    padding: 16px 20px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .savings-badge-label {
+    font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em;
+    color: #38ef7d; margin-bottom: 4px; text-transform: uppercase;
+  }
+  .savings-amount {
+    font-size: 1.35rem; font-weight: 800; color: #fff; letter-spacing: -0.01em;
+  }
+  .savings-subtext {
+    font-size: 0.78rem; color: #9aa4b2; margin-top: 2px;
+  }
+  .roundup-repos-wrap {
+    display: flex; flex-direction: column; gap: 20px; margin-top: 8px;
+  }
+  .roundup-repo-card {
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px; padding: 22px 24px;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .roundup-repo-card:hover {
+    border-color: rgba(91, 140, 255, 0.3);
+    background: rgba(0, 0, 0, 0.35);
+  }
+  .roundup-repo-header {
+    display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px;
+  }
+  .roundup-repo-title-row {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .roundup-repo-num {
+    font-size: 0.8rem; font-weight: 800; color: #5b8cff;
+    background: rgba(91, 140, 255, 0.12); border: 1px solid rgba(91, 140, 255, 0.28);
+    padding: 3px 9px; border-radius: 8px;
+  }
+  .roundup-repo-name {
+    font-size: 1.22rem; font-weight: 800; margin: 0; color: #fff;
+  }
+  .roundup-repo-name a {
+    color: #fff; text-decoration: none;
+  }
+  .roundup-repo-name a:hover {
+    color: #5b8cff; text-decoration: underline;
+  }
+  .roundup-repo-pills {
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .roundup-repo-headline {
+    font-size: 1.02rem; font-weight: 700; color: #f2f2f4; margin: 0 0 8px; line-height: 1.45;
+  }
+  .roundup-repo-narration {
+    font-size: 0.92rem; color: #b8b8c2; margin: 0 0 12px; line-height: 1.55;
+  }
+  .roundup-repo-bullets {
+    margin: 0 0 14px; padding-left: 20px; color: #9aa4b2;
+    font-size: 0.88rem; line-height: 1.55;
+  }
+  .roundup-repo-bullets li { margin-bottom: 4px; }
+  .roundup-repo-note {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.78rem; color: #7f7f88; margin-bottom: 14px;
+  }
+  .roundup-repo-footer {
+    display: flex; justify-content: flex-end; padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
   .promise {
     font-size: 1.15rem; color: #d8d8e0; margin: 0 0 16px; line-height: 1.6; font-weight: 500;
   }
@@ -291,6 +367,8 @@
           
         </div>
 
+        
+
         <div class="media-actions">
           <a class="action-btn primary-btn" href="https://youtube.com/shorts/Mf4NIQEENRY" target="_blank" rel="noopener">▶ Watch on YouTube</a>
           <a class="action-btn" href="https://github.com/starship/starship" target="_blank" rel="noopener">View on GitHub ↗</a>
@@ -314,6 +392,7 @@
         </div>
 
         <div class="pills-row">
+          
           <span class="pill pill-stars">★ 59.5k</span>
           <span class="pill">Rust</span>
           
@@ -323,6 +402,7 @@
 
         <p class="hook">Your terminal prompt is slow. Switch to Starship.</p>
 
+        
         <div class="beats-wrap">
           
           <div class="beat-card">
@@ -360,6 +440,7 @@
           </div>
           
         </div>
+        
 
         <nav class="repo-nav" aria-label="Adjacent Repositories">
           <a class="repo-nav-card repo-nav-prev" href="../../../repos/httpie/cli/">
