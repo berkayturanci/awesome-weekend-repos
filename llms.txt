@@ -1,7 +1,7 @@
 # Awesome Weekend Repos
 
-> A curated list of useful open-source developer tools — one repo a weekend,
-> each explained in an under-a-minute video. Curated and published by @weekendrepos
+> Curated open-source developer tools, CLI utilities & weekend toolkits —
+> each explained in under a minute. Curated and published by @weekendrepos
 > on YouTube and Instagram.
 
 ## Links

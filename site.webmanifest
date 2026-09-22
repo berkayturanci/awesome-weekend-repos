@@ -1,7 +1,7 @@
 {
   "name": "Awesome Weekend Repos",
   "short_name": "Weekend Repos",
-  "description": "A curated list of useful open-source developer tools — one repo a weekend, each explained in an under-a-minute video. Discover CLI tools, self-hosting, and developer productivity repos with links to watch on YouTube and Instagram.",
+  "description": "Curated open-source developer tools, CLI utilities & weekend toolkits — each explained in an under-a-minute video. Discover CLI tools, self-hosting, and productivity repos to explore on your weekend hacks.",
   "start_url": "https://berkayturanci.github.io/awesome-weekend-repos/",
   "scope": "https://berkayturanci.github.io/awesome-weekend-repos/",
   "display": "standalone",

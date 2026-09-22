@@ -5,7 +5,8 @@
 [![YouTube](https://img.shields.io/badge/YouTube-@weekendrepos-red?logo=youtube)](https://youtube.com/@weekendrepos)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)](CONTRIBUTING.md)
 
-One open-source repo a weekend, explained in under a minute — the useful
+Practical open-source developer tools, CLI utilities & curated toolkits to
+explore on your weekend hacks — each explained in under a minute. The useful
 kind: solves one real problem, no PhD required to understand why it exists.
 
 Curated and posted by [@weekendrepos](https://youtube.com/@weekendrepos) on
