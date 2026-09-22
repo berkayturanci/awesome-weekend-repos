@@ -144,8 +144,29 @@
     --toggle-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
   }
 
-  html[data-theme="light"] .stars { display: none !important; }
-  html[data-theme="light"] .bg-glow { opacity: 0.35; }
+  html[data-theme="light"] .stars {
+    display: block;
+    opacity: 0.85;
+  }
+  html[data-theme="light"] .star {
+    background: #0f172a !important;
+    box-shadow: 0 0 5px 1px rgba(15, 23, 42, 0.14) !important;
+    border-radius: 50% !important;
+    --peak: 0.35 !important;
+  }
+  html[data-theme="light"] .star:nth-child(3n) {
+    background: #1e293b !important;
+    --peak: 0.25 !important;
+  }
+  html[data-theme="light"] .star:nth-child(3n+1) {
+    background: #020617 !important;
+    --peak: 0.42 !important;
+  }
+  html[data-theme="light"] .star:nth-child(3n+2) {
+    background: #475569 !important;
+    --peak: 0.20 !important;
+  }
+  html[data-theme="light"] .bg-glow { opacity: 0.25; }
 
   * { box-sizing: border-box; }
   html, body {
