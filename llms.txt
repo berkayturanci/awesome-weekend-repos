@@ -13,6 +13,8 @@
 
 ## Curated Repositories
 
+- [CorentinTh/it-tools](https://berkayturanci.github.io/awesome-weekend-repos/repos/CorentinTh/it-tools/): Self-host 100+ offline developer utilities with one Docker command (Language: TypeScript) [GPL-3.0] · [GitHub](https://github.com/CorentinTh/it-tools) · [YouTube](https://youtube.com/shorts/EDpbnZDCXaI)
+- [go-gitea/gitea](https://berkayturanci.github.io/awesome-weekend-repos/repos/go-gitea/gitea/): Run a full GitHub alternative on a $5 server or Raspberry Pi (Language: Go) [MIT] · [GitHub](https://github.com/go-gitea/gitea) · [YouTube](https://youtube.com/shorts/C6OzO1slBio)
 - [Weekend Toolkit #2](https://berkayturanci.github.io/awesome-weekend-repos/repos/weekend-toolkit-2/): Five developer repos that upgrade your workflow and cut SaaS costs. (Language: Toolkits) [WEEKLY ROUNDUP] · [GitHub](https://github.com/penpot/penpot) · [YouTube](https://youtube.com/shorts/bmEkbbc_kMI)
 - [wagoodman/dive](https://berkayturanci.github.io/awesome-weekend-repos/repos/wagoodman/dive/): How to inspect Docker layers and discover wasted gigabytes (Language: Go) [MIT] · [GitHub](https://github.com/wagoodman/dive) · [YouTube](https://youtube.com/shorts/dFZTQYbDixw)
 - [OpenBB-finance/OpenBB](https://berkayturanci.github.io/awesome-weekend-repos/repos/OpenBB-finance/OpenBB/): The open source Bloomberg Terminal alternative for analysts and quants (Language: Python) [AGPL-3.0] · [GitHub](https://github.com/OpenBB-finance/OpenBB) · [YouTube](https://youtube.com/shorts/eN0Vk8MFBvs)
