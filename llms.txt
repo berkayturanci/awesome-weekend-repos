@@ -13,6 +13,7 @@
 
 ## Curated Repositories
 
+- [vectorize-io/hindsight](https://berkayturanci.github.io/awesome-weekend-repos/repos/vectorize-io/hindsight/): How Hindsight gives AI agents long-term learning memory (Language: Python) [MIT] · [GitHub](https://github.com/vectorize-io/hindsight) · [YouTube](https://youtube.com/shorts/B1ULJ4ljyBE)
 - [cloudflare/security-audit-skill](https://berkayturanci.github.io/awesome-weekend-repos/repos/cloudflare/security-audit-skill/): How Cloudflare's open skill turns coding agents into red teams (Language: Markdown) [MIT] · [GitHub](https://github.com/cloudflare/security-audit-skill) · [YouTube](https://youtube.com/shorts/e02P-qWuebU)
 - [google/ax](https://berkayturanci.github.io/awesome-weekend-repos/repos/google/ax/): How Google's AX orchestrates billions of autonomous agents in Go (Language: Go) [Apache-2.0] · [GitHub](https://github.com/google/ax) · [YouTube](https://youtube.com/shorts/AWl4zMAqVRA)
 - [anthropics/financial-services](https://berkayturanci.github.io/awesome-weekend-repos/repos/anthropics/financial-services/): Anthropic's open-source financial agents for Excel and pitch decks (Language: Python) [Apache-2.0] · [GitHub](https://github.com/anthropics/financial-services) · [YouTube](https://youtube.com/shorts/USD7NLUD4dg)
