@@ -17,6 +17,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
+| [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 2.8k | Markdown | MIT | How Cloudflare's open skill turns coding agents into red teams | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/cloudflare/security-audit-skill/) · [▶ YouTube](https://youtube.com/shorts/e02P-qWuebU) |
 | [google/ax](https://github.com/google/ax) | 9.5k | Go | Apache-2.0 | How Google's AX orchestrates billions of autonomous agents in Go | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/google/ax/) · [▶ YouTube](https://youtube.com/shorts/AWl4zMAqVRA) |
 | [anthropics/financial-services](https://github.com/anthropics/financial-services) | 37.1k | Python | Apache-2.0 | Anthropic's open-source financial agents for Excel and pitch decks | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/anthropics/financial-services/) · [▶ YouTube](https://youtube.com/shorts/USD7NLUD4dg) |
 | [CorentinTh/it-tools](https://github.com/CorentinTh/it-tools) | 40.6k | TypeScript | GPL-3.0 | Self-host 100+ offline developer utilities with one Docker command | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/CorentinTh/it-tools/) · [▶ YouTube](https://youtube.com/shorts/EDpbnZDCXaI) |
