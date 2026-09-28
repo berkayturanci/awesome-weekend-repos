@@ -69,13 +69,19 @@ async function main() {
   // elsewhere — no other part of the file is touched.
   html = html.slice(0, match.index) + `const REPOS = ${JSON.stringify(repos)};` + html.slice(match.index + match[0].length);
 
-  // Visible per-card badge: cards render in the same order as REPOS, one
-  // <span class="card-stars">★ X</span> per card — walk them in lockstep.
-  let cardIndex = 0;
-  html = html.replace(/(<span class="card-stars">★ )([^<]*)(<\/span>)/g, (whole, pre, old, post) => {
-    const r = repos[cardIndex++];
-    return `${pre}${esc(r.stars)}${post}`;
-  });
+  // Visible per-card badge: match each card by data-index to prevent desync
+  // caused by non-standard badges (roundup savings, "Gem 💎").
+  html = html.replace(
+    /(<button class="card[^"]*" data-index="(\d+)"[^>]*>[\s\S]*?<span class="card-stars[^"]*">)([^<]*)(<\/span>)/g,
+    (whole, pre, idxStr, old, post) => {
+      const idx = Number(idxStr);
+      const r = repos[idx];
+      if (!r) return whole;
+      if (r.isRoundup) return whole;
+      if (typeof r.stars === "string" && (r.stars.includes("Gem") || r.stars.includes("💎"))) return whole;
+      return `${pre}★ ${esc(r.stars)}${post}`;
+    }
+  );
 
   writeFileSync(htmlPath, html, "utf8");
 
