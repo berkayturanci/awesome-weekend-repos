@@ -17,6 +17,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
+| [affaan-m/ECC](https://github.com/affaan-m/ECC) | 228k | Python | MIT | How ECC optimizes AI coding agent performance with skills | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/affaan-m/ECC/) · [▶ YouTube](https://youtube.com/shorts/Dz2kcdRrWMo) |
 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | 41k | Python | MIT | How Hindsight gives AI agents long-term learning memory | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/vectorize-io/hindsight/) · [▶ YouTube](https://youtube.com/shorts/B1ULJ4ljyBE) |
 | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 22.8k | Markdown | MIT | How Cloudflare's open skill turns coding agents into red teams | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/cloudflare/security-audit-skill/) · [▶ YouTube](https://youtube.com/shorts/e02P-qWuebU) |
 | [google/ax](https://github.com/google/ax) | 12.4k | Go | Apache-2.0 | How Google's AX orchestrates billions of autonomous agents in Go | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/google/ax/) · [▶ YouTube](https://youtube.com/shorts/AWl4zMAqVRA) |
