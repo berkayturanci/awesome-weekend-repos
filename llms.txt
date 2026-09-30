@@ -13,6 +13,7 @@
 
 ## Curated Repositories
 
+- [tt-a1i/archify](https://berkayturanci.github.io/awesome-weekend-repos/repos/tt-a1i/archify/): Generate interactive architecture diagrams from code with AI agents (Language: TypeScript) [MIT] · [GitHub](https://github.com/tt-a1i/archify) · [YouTube](https://youtube.com/shorts/mNKwHgA2PqY)
 - [debpalash/VoiceStudio](https://berkayturanci.github.io/awesome-weekend-repos/repos/debpalash/VoiceStudio/): Free, local voice cloning in 646 languages without cloud limits (Language: Python) [AGPL-3.0] · [GitHub](https://github.com/debpalash/VoiceStudio) · [YouTube](https://youtube.com/shorts/0e1GuRmZvb0)
 - [affaan-m/ECC](https://berkayturanci.github.io/awesome-weekend-repos/repos/affaan-m/ECC/): How ECC optimizes AI coding agent performance with skills (Language: Python) [MIT] · [GitHub](https://github.com/affaan-m/ECC) · [YouTube](https://youtube.com/shorts/Dz2kcdRrWMo)
 - [vectorize-io/hindsight](https://berkayturanci.github.io/awesome-weekend-repos/repos/vectorize-io/hindsight/): How Hindsight gives AI agents long-term learning memory (Language: Python) [MIT] · [GitHub](https://github.com/vectorize-io/hindsight) · [YouTube](https://youtube.com/shorts/B1ULJ4ljyBE)

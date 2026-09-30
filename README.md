@@ -17,6 +17,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
+| [tt-a1i/archify](https://github.com/tt-a1i/archify) | 74.7k | TypeScript | MIT | Generate interactive architecture diagrams from code with AI agents | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/tt-a1i/archify/) · [▶ YouTube](https://youtube.com/shorts/mNKwHgA2PqY) |
 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 50.1k | Python | AGPL-3.0 | Free, local voice cloning in 646 languages without cloud limits | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/debpalash/VoiceStudio/) · [▶ YouTube](https://youtube.com/shorts/0e1GuRmZvb0) |
 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 270.1k | Python | MIT | How ECC optimizes AI coding agent performance with skills | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/affaan-m/ECC/) · [▶ YouTube](https://youtube.com/shorts/Dz2kcdRrWMo) |
 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | 43.8k | Python | MIT | How Hindsight gives AI agents long-term learning memory | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/vectorize-io/hindsight/) · [▶ YouTube](https://youtube.com/shorts/B1ULJ4ljyBE) |
