@@ -13,6 +13,7 @@
 
 ## Curated Repositories
 
+- [debpalash/VoiceStudio](https://berkayturanci.github.io/awesome-weekend-repos/repos/debpalash/VoiceStudio/): Free, local voice cloning in 646 languages without cloud limits (Language: Python) [AGPL-3.0] · [GitHub](https://github.com/debpalash/VoiceStudio) · [YouTube](https://youtube.com/shorts/0e1GuRmZvb0)
 - [affaan-m/ECC](https://berkayturanci.github.io/awesome-weekend-repos/repos/affaan-m/ECC/): How ECC optimizes AI coding agent performance with skills (Language: Python) [MIT] · [GitHub](https://github.com/affaan-m/ECC) · [YouTube](https://youtube.com/shorts/Dz2kcdRrWMo)
 - [vectorize-io/hindsight](https://berkayturanci.github.io/awesome-weekend-repos/repos/vectorize-io/hindsight/): How Hindsight gives AI agents long-term learning memory (Language: Python) [MIT] · [GitHub](https://github.com/vectorize-io/hindsight) · [YouTube](https://youtube.com/shorts/B1ULJ4ljyBE)
 - [cloudflare/security-audit-skill](https://berkayturanci.github.io/awesome-weekend-repos/repos/cloudflare/security-audit-skill/): How Cloudflare's open skill turns coding agents into red teams (Language: Markdown) [MIT] · [GitHub](https://github.com/cloudflare/security-audit-skill) · [YouTube](https://youtube.com/shorts/e02P-qWuebU)

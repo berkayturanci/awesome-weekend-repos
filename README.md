@@ -17,6 +17,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
+| [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 19.4k | Python | AGPL-3.0 | Free, local voice cloning in 646 languages without cloud limits | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/debpalash/VoiceStudio/) · [▶ YouTube](https://youtube.com/shorts/0e1GuRmZvb0) |
 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 270k | Python | MIT | How ECC optimizes AI coding agent performance with skills | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/affaan-m/ECC/) · [▶ YouTube](https://youtube.com/shorts/Dz2kcdRrWMo) |
 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | 43.5k | Python | MIT | How Hindsight gives AI agents long-term learning memory | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/vectorize-io/hindsight/) · [▶ YouTube](https://youtube.com/shorts/B1ULJ4ljyBE) |
 | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 23.3k | Markdown | MIT | How Cloudflare's open skill turns coding agents into red teams | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/cloudflare/security-audit-skill/) · [▶ YouTube](https://youtube.com/shorts/e02P-qWuebU) |
