@@ -13,6 +13,10 @@
 
 ## Curated Repositories
 
+- [Raphire/Win11Debloat](https://berkayturanci.github.io/awesome-weekend-repos/repos/Raphire/Win11Debloat/): Remove bloatware, disable telemetry, and speed up Windows 11 (Language: PowerShell) · [GitHub](https://github.com/Raphire/Win11Debloat) · [YouTube](https://youtube.com/shorts/32OYrlUmeCY)
+- [google-gemini/gemini-cli](https://berkayturanci.github.io/awesome-weekend-repos/repos/google-gemini/gemini-cli/): Pipe shell commands and codebase context directly into Gemini (Language: TypeScript) [Apache-2.0] · [GitHub](https://github.com/google-gemini/gemini-cli) · [YouTube](https://youtube.com/shorts/n6S1v5kHZ3Y)
+- [sherlock-project/sherlock](https://berkayturanci.github.io/awesome-weekend-repos/repos/sherlock-project/sherlock/): Find any username across 400+ social platforms in seconds (Language: Python) [MIT] · [GitHub](https://github.com/sherlock-project/sherlock) · [YouTube](https://youtube.com/shorts/JOTXTar2pkI)
+- [drawdb-io/drawdb](https://berkayturanci.github.io/awesome-weekend-repos/repos/drawdb-io/drawdb/): Design relational database schemas and export SQL in your browser (Language: JavaScript) [AGPL-3.0] · [GitHub](https://github.com/drawdb-io/drawdb) · [YouTube](https://youtube.com/shorts/2J0MW9zDbCw)
 - [tt-a1i/archify](https://berkayturanci.github.io/awesome-weekend-repos/repos/tt-a1i/archify/): Generate interactive architecture diagrams from code with AI agents (Language: TypeScript) [MIT] · [GitHub](https://github.com/tt-a1i/archify) · [YouTube](https://youtube.com/shorts/mNKwHgA2PqY)
 - [debpalash/VoiceStudio](https://berkayturanci.github.io/awesome-weekend-repos/repos/debpalash/VoiceStudio/): Free, local voice cloning in 646 languages without cloud limits (Language: Python) [AGPL-3.0] · [GitHub](https://github.com/debpalash/VoiceStudio) · [YouTube](https://youtube.com/shorts/0e1GuRmZvb0)
 - [affaan-m/ECC](https://berkayturanci.github.io/awesome-weekend-repos/repos/affaan-m/ECC/): How ECC optimizes AI coding agent performance with skills (Language: Python) [MIT] · [GitHub](https://github.com/affaan-m/ECC) · [YouTube](https://youtube.com/shorts/Dz2kcdRrWMo)
