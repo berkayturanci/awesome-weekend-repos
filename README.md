@@ -82,7 +82,7 @@ same source the videos are built from, so it never drifts.
 
 ## How this list works
 
-Every row here comes from `catalog.yml` in the [instatech](https://github.com/berkayturanci/instatech)
+Every row here comes from `catalog.yml` in the private video
 pipeline that renders the videos themselves — the same source of truth, not
 a hand-maintained copy. Running the generator after a publish regenerates
 this table, `index.html`, and the thumbnails together, so the list can't

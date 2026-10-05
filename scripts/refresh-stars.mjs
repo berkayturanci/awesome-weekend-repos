@@ -12,10 +12,10 @@
  * those are intentional, hand-authored special cases, not stale counts.
  *
  * This is display-only. The authored source of truth for a repo's card
- * (channels/weekendrepos/content/<slug>.yml in instatech) is a fact-checked
+ * (the per-repo content file in the video pipeline) is a fact-checked
  * snapshot at publish time and is never touched by this script — a
  * published video's on-screen star count stays frozen forever, per
- * instatech's CLAUDE.md invariant that a published video is immutable.
+ * the pipeline's invariant that a published video is immutable.
  * Only this companion site's live display updates.
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -124,7 +124,7 @@ function escapeRegExp(s) {
 }
 
 // Same escaping awesome-list.ts uses, kept local so this script has no
-// dependency on the instatech repo.
+// dependency on the video pipeline.
 function esc(s) {
   return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
