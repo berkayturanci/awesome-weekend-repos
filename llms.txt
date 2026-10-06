@@ -13,6 +13,8 @@
 
 ## Curated Repositories
 
+- [Weekend Toolkit #3](https://berkayturanci.github.io/awesome-weekend-repos/repos/weekend-toolkit-3/): Five open source repos that cut $240/mo in developer subscriptions. (Language: Toolkits) [WEEKLY ROUNDUP] · [GitHub](https://github.com/drawdb-io/drawdb) · [YouTube](https://youtube.com/shorts/gJ9FIkqzHqw)
+- [google/zx](https://berkayturanci.github.io/awesome-weekend-repos/repos/google/zx/): Why 47k developers replaced fragile bash scripts with google/zx (Language: JavaScript) [Apache-2.0] · [GitHub](https://github.com/google/zx) · [YouTube](https://youtube.com/shorts/VKb6Jse5moE)
 - [Raphire/Win11Debloat](https://berkayturanci.github.io/awesome-weekend-repos/repos/Raphire/Win11Debloat/): Remove bloatware, disable telemetry, and speed up Windows 11 (Language: PowerShell) · [GitHub](https://github.com/Raphire/Win11Debloat) · [YouTube](https://youtube.com/shorts/32OYrlUmeCY)
 - [google-gemini/gemini-cli](https://berkayturanci.github.io/awesome-weekend-repos/repos/google-gemini/gemini-cli/): Pipe shell commands and codebase context directly into Gemini (Language: TypeScript) [Apache-2.0] · [GitHub](https://github.com/google-gemini/gemini-cli) · [YouTube](https://youtube.com/shorts/n6S1v5kHZ3Y)
 - [sherlock-project/sherlock](https://berkayturanci.github.io/awesome-weekend-repos/repos/sherlock-project/sherlock/): Find any username across 400+ social platforms in seconds (Language: Python) [MIT] · [GitHub](https://github.com/sherlock-project/sherlock) · [YouTube](https://youtube.com/shorts/JOTXTar2pkI)
