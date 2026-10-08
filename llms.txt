@@ -13,6 +13,8 @@
 
 ## Curated Repositories
 
+- [rustdesk/rustdesk](https://berkayturanci.github.io/awesome-weekend-repos/repos/rustdesk/rustdesk/): Why 125k developers replace TeamViewer and AnyDesk with RustDesk (Language: Rust) [AGPL-3.0] · [GitHub](https://github.com/rustdesk/rustdesk) · [YouTube](https://youtube.com/shorts/4eDyrNsOXfY)
+- [meilisearch/meilisearch](https://berkayturanci.github.io/awesome-weekend-repos/repos/meilisearch/meilisearch/): Why 59k developers replace Elasticsearch with Meilisearch (Language: Rust) [MIT] · [GitHub](https://github.com/meilisearch/meilisearch) · [YouTube](https://youtube.com/shorts/cFhltecNMGk)
 - [agno-agi/agno](https://berkayturanci.github.io/awesome-weekend-repos/repos/agno-agi/agno/): Why 44k developers build multi-agent teams with Agno (Language: Python) [MIT] · [GitHub](https://github.com/agno-agi/agno) · [YouTube](https://youtube.com/shorts/dich4AmYsrc)
 - [Weekend Toolkit #3](https://berkayturanci.github.io/awesome-weekend-repos/repos/weekend-toolkit-3/): Five open source repos that cut $240/mo in developer subscriptions. (Language: Toolkits) [WEEKLY ROUNDUP] · [GitHub](https://github.com/drawdb-io/drawdb) · [YouTube](https://youtube.com/shorts/gJ9FIkqzHqw)
 - [google/zx](https://berkayturanci.github.io/awesome-weekend-repos/repos/google/zx/): Why 47k developers replaced fragile bash scripts with google/zx (Language: JavaScript) [Apache-2.0] · [GitHub](https://github.com/google/zx) · [YouTube](https://youtube.com/shorts/VKb6Jse5moE)
