@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ast-grep — Stop using brittle regex to search and refactor code</title>
+<meta name="description" content="Stop using brittle regex to search and refactor code" />
+<meta name="author" content="Berkay Turancı" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0b0b0d" />
+<link rel="canonical" href="https://berkayturanci.github.io/awesome-weekend-repos/repos/ast-grep/" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Awesome Weekend Repos" />
+<meta property="og:title" content="ast-grep — Stop using brittle regex to search and refactor code" />
+<meta property="og:description" content="Stop using brittle regex to search and refactor code" />
+<meta property="og:url" content="https://berkayturanci.github.io/awesome-weekend-repos/repos/ast-grep/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ast-grep/ast-grep" />
+<meta name="twitter:description" content="Stop using brittle regex to search and refactor code" />
+
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon.png" />
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareSourceCode","name":"ast-grep","codeRepository":"https://github.com/ast-grep/ast-grep","description":"Stop using brittle regex to search and refactor code","programmingLanguage":"Rust","license":"MIT","url":"https://berkayturanci.github.io/awesome-weekend-repos/repos/ast-grep/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Awesome Weekend Repos","item":"https://berkayturanci.github.io/awesome-weekend-repos/"},{"@type":"ListItem","position":2,"name":"ast-grep/ast-grep","item":"https://berkayturanci.github.io/awesome-weekend-repos/repos/ast-grep/"}]}]}</script>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #0b0b0d; color: #f2f2f4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  .crumb { font-size: 0.85rem; color: #6f6f76; margin-bottom: 24px; }
+  .crumb a { color: #9aa4b2; text-decoration: none; }
+  .crumb a:hover { color: #5b8cff; text-decoration: underline; }
+  h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 8px; letter-spacing: -0.02em; }
+  .promise { font-size: 1.1rem; color: #c9c9d1; margin: 0 0 20px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .facts span { font-size: 0.8rem; color: #9aa4b2; background: #16161a;
+    border: 1px solid #23232a; border-radius: 999px; padding: 4px 12px; }
+  .shot { width: 100%; height: auto; border-radius: 12px; border: 1px solid #23232a;
+    margin-bottom: 28px; display: block; }
+  .hook { font-size: 1.05rem; color: #f2f2f4; border-left: 3px solid #5b8cff;
+    padding-left: 14px; margin: 0 0 32px; }
+  h2 { font-size: 1.05rem; margin: 28px 0 6px; letter-spacing: -0.01em; }
+  p { margin: 0 0 8px; color: #c9c9d1; }
+  .note { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem; color: #8a8a93; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; margin: 36px 0 0;
+    padding-top: 24px; border-top: 1px solid #1c1c21; }
+  .links a { color: #5b8cff; text-decoration: none; font-size: 0.9rem; }
+  .links a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <main>
+    <nav class="crumb"><a href="../../">Awesome Weekend Repos</a> › ast-grep/ast-grep</nav>
+    <h1>ast-grep/ast-grep</h1>
+    <p class="promise">Stop using brittle regex to search and refactor code</p>
+    <div class="facts"><span>★ 11k</span><span>Rust</span><span>MIT license</span></div>
+    
+    <p class="hook">Stop using regex to refactor your code.</p>
+    <h2>Regex fails when code spans multiple lines or variable names overlap.</h2>
+    <p>First, regex treats your codebase like flat text. It breaks on multiline formatting, matches identifiers inside comments, and turns automated refactoring into a disaster.</p>
+    <p class="note">regex matches text strings · blind to AST syntax &amp; scopes</p>
+    <h2>Search code using actual code syntax and metavariables.</h2>
+    <p>Second, ast-grep uses Tree-sitter to parse your code into syntax trees. You write patterns using actual language syntax and dollar variables to match expressions, statements, and arguments across twenty languages.</p>
+    <p class="note">Tree-sitter AST parsing · supports 20+ languages natively</p>
+    <h2>Perform safe codebase-wide rewrites directly from the command line.</h2>
+    <p>Third, its sg rewrite command lets you refactor code across thousands of files. It extracts matched subtrees, preserves surrounding indentation, and shows interactive diffs before applying any changes.</p>
+    <p class="note">sg rewrite · interactive diffs · preserves code formatting</p>
+    <h2>Define custom CI lint rules in three lines of clean YAML.</h2>
+    <p>Fourth, you can turn any search pattern into an automated CI lint rule. No complex ESLint plugin boilerplate, no compiler APIs, just clean YAML rules enforced at blazingly fast Rust speed.</p>
+    <p class="note">sg scan · custom YAML lint rules · no plugin boilerplate</p>
+    <h2>Open source under MIT, written in Rust with 11,000 GitHub stars.</h2>
+    <p>Open source under the MIT license, written in Rust by Herrington Darkholme with over eleven thousand stars.</p>
+    <p class="note">ast-grep/ast-grep · 11k+ ★ · MIT · Rust</p>
+    <div class="links"><a href="https://youtube.com/shorts/Zq6FSAhBWmg">Watch on YouTube</a><a href="https://www.instagram.com/reel/DdKHMVviLPI/">Watch on Instagram</a><a href="https://github.com/ast-grep/ast-grep">View on GitHub</a></div>
+  </main>
+</body>
+</html>
