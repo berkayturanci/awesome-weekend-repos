@@ -13,6 +13,7 @@
 
 ## Curated Repositories
 
+- [kepano/obsidian-skills](https://berkayturanci.github.io/awesome-weekend-repos/repos/kepano/obsidian-skills/): How Steph Ango's skills connect AI agents to your Obsidian vault (Language: Markdown) [MIT] · [GitHub](https://github.com/kepano/obsidian-skills) · [YouTube](https://youtube.com/shorts/NfSiGeswHoI)
 - [berkayturanci/keel](https://berkayturanci.github.io/awesome-weekend-repos/repos/berkayturanci/keel/): How Keel turns autonomous coding agents into reliable work owners (Language: Python) [Apache-2.0] · [GitHub](https://github.com/berkayturanci/keel) · [YouTube](https://youtube.com/shorts/OlU87eAImAo)
 - [Graphify-Labs/graphify](https://berkayturanci.github.io/awesome-weekend-repos/repos/Graphify-Labs/graphify/): Why developers use Graphify to build Graph RAG from codebases (Language: Python) [Apache-2.0] · [GitHub](https://github.com/Graphify-Labs/graphify) · [YouTube](https://youtube.com/shorts/LurtPuwfrzQ)
 - [farion1231/cc-switch](https://berkayturanci.github.io/awesome-weekend-repos/repos/farion1231/cc-switch/): Why developers use CC-Switch to toggle Claude Code models instantly (Language: Rust) [MIT] · [GitHub](https://github.com/farion1231/cc-switch) · [YouTube](https://youtube.com/shorts/NESaU1eE81s)
