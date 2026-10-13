@@ -17,6 +17,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
+| [ghostty-org/ghostty](https://github.com/ghostty-org/ghostty) | 30k | Zig | MIT | Why developers are switching from Alacritty and iTerm to Ghostty | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/ghostty-org/ghostty/) · [▶ YouTube](https://youtube.com/shorts/Cfsxyo1_6f0) |
 | [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) | 49.5k | Markdown | MIT | How Steph Ango's skills connect AI agents to your Obsidian vault | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/kepano/obsidian-skills/) · [▶ YouTube](https://youtube.com/shorts/NfSiGeswHoI) |
 | [berkayturanci/keel](https://github.com/berkayturanci/keel) | Gem 💎 | Python | Apache-2.0 | How Keel turns autonomous coding agents into reliable work owners | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/berkayturanci/keel/) · [▶ YouTube](https://youtube.com/shorts/OlU87eAImAo) |
 | [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | 126k | Python | Apache-2.0 | Why developers use Graphify to build Graph RAG from codebases | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/Graphify-Labs/graphify/) · [▶ YouTube](https://youtube.com/shorts/LurtPuwfrzQ) |
