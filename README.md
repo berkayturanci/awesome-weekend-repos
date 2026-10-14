@@ -17,6 +17,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
+| [astral-sh/ruff](https://github.com/astral-sh/ruff) | 35k | Rust | MIT | Why Python developers replaced Flake8 and Black with Ruff | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/astral-sh/ruff/) · [▶ YouTube](https://youtube.com/shorts/S-hV5rL023c) |
 | [ghostty-org/ghostty](https://github.com/ghostty-org/ghostty) | 62.2k | Zig | MIT | Why developers are switching from Alacritty and iTerm to Ghostty | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/ghostty-org/ghostty/) · [▶ YouTube](https://youtube.com/shorts/Cfsxyo1_6f0) |
 | [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) | 49.5k | Markdown | MIT | How Steph Ango's skills connect AI agents to your Obsidian vault | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/kepano/obsidian-skills/) · [▶ YouTube](https://youtube.com/shorts/NfSiGeswHoI) |
 | [berkayturanci/keel](https://github.com/berkayturanci/keel) | Gem 💎 | Python | Apache-2.0 | How Keel turns autonomous coding agents into reliable work owners | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/berkayturanci/keel/) · [▶ YouTube](https://youtube.com/shorts/OlU87eAImAo) |
