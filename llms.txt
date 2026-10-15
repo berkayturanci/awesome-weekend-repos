@@ -13,6 +13,7 @@
 
 ## Curated Repositories
 
+- [floci-io/floci](https://berkayturanci.github.io/awesome-weekend-repos/repos/floci-io/floci/): Why developers replace heavy LocalStack containers with Floci (Language: Rust) [Apache-2.0] · [GitHub](https://github.com/floci-io/floci) · [YouTube](https://youtube.com/shorts/QKmFDKpYjRc)
 - [astral-sh/ruff](https://berkayturanci.github.io/awesome-weekend-repos/repos/astral-sh/ruff/): Why Python developers replaced Flake8 and Black with Ruff (Language: Rust) [MIT] · [GitHub](https://github.com/astral-sh/ruff) · [YouTube](https://youtube.com/shorts/S-hV5rL023c)
 - [ghostty-org/ghostty](https://berkayturanci.github.io/awesome-weekend-repos/repos/ghostty-org/ghostty/): Why developers are switching from Alacritty and iTerm to Ghostty (Language: Zig) [MIT] · [GitHub](https://github.com/ghostty-org/ghostty) · [YouTube](https://youtube.com/shorts/Cfsxyo1_6f0)
 - [kepano/obsidian-skills](https://berkayturanci.github.io/awesome-weekend-repos/repos/kepano/obsidian-skills/): How Steph Ango's skills connect AI agents to your Obsidian vault (Language: Markdown) [MIT] · [GitHub](https://github.com/kepano/obsidian-skills) · [YouTube](https://youtube.com/shorts/NfSiGeswHoI)
