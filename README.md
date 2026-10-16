@@ -17,6 +17,7 @@ same source the videos are built from, so it never drifts.
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|
+| [YashjitPal/BetterGravity](https://github.com/YashjitPal/BetterGravity) | 1.8k | TypeScript | MIT | How BetterGravity brings community themes & plugins to Antigravity | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/YashjitPal/BetterGravity/) · [▶ YouTube](https://youtube.com/shorts/MbDgsp6_0N8) |
 | [floci-io/floci](https://github.com/floci-io/floci) | 26.9k | Rust | Apache-2.0 | Why developers replace heavy LocalStack containers with Floci | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/floci-io/floci/) · [▶ YouTube](https://youtube.com/shorts/QKmFDKpYjRc) |
 | [astral-sh/ruff](https://github.com/astral-sh/ruff) | 50.1k | Rust | MIT | Why Python developers replaced Flake8 and Black with Ruff | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/astral-sh/ruff/) · [▶ YouTube](https://youtube.com/shorts/S-hV5rL023c) |
 | [ghostty-org/ghostty](https://github.com/ghostty-org/ghostty) | 62.3k | Zig | MIT | Why developers are switching from Alacritty and iTerm to Ghostty | [Review](https://berkayturanci.github.io/awesome-weekend-repos/repos/ghostty-org/ghostty/) · [▶ YouTube](https://youtube.com/shorts/Cfsxyo1_6f0) |
