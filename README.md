@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Gallery](https://img.shields.io/badge/gallery-live-brightgreen)](https://berkayturanci.github.io/awesome-weekend-repos/)
+[![Newsletter](https://img.shields.io/badge/newsletter-weekly_dispatch-5b8cff)](https://berkayturanci.github.io/awesome-weekend-repos/#topNewsletterForm)
 [![YouTube](https://img.shields.io/badge/YouTube-@weekendrepos-red?logo=youtube)](https://youtube.com/@weekendrepos)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)](CONTRIBUTING.md)
 
@@ -13,7 +14,7 @@ Curated and posted by [@weekendrepos](https://youtube.com/@weekendrepos) on
 YouTube and Instagram. This list is generated straight from the
 same source the videos are built from, so it never drifts.
 
-**[Browse the gallery →](https://berkayturanci.github.io/awesome-weekend-repos/)**
+**[Browse the gallery →](https://berkayturanci.github.io/awesome-weekend-repos/)** · **[📬 Subscribe to the Weekly Developer Dispatch (copy-paste CLI cheatsheets & SaaS replacements) →](https://berkayturanci.github.io/awesome-weekend-repos/#topNewsletterForm)**
 
 | Repo | Stars | Language | License | What it does | Watch |
 |---|---|---|---|---|---|

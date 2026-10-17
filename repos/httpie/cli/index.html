@@ -403,6 +403,89 @@
   .breadcrumbs span.sep { color: var(--border-medium); }
   .breadcrumbs span.current { color: var(--text-primary); }
 
+  /* --- Detail Page Newsletter Card --- */
+  .detail-newsletter-card {
+    margin-top: 28px;
+    padding: 20px 22px;
+    border-radius: 18px;
+    background: var(--bg-surface-elevated);
+    border: 1px solid rgba(91, 140, 255, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 0 20px rgba(91, 140, 255, 0.1);
+  }
+  .detail-newsletter-kicker {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-subtle);
+    border: 1px solid var(--border-medium);
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+  }
+  .detail-newsletter-title {
+    margin: 0 0 6px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text-primary);
+  }
+  .detail-newsletter-desc {
+    margin: 0 0 14px;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .detail-newsletter-form {
+    display: flex;
+    gap: 10px;
+  }
+  .detail-newsletter-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-medium);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    outline: none;
+  }
+  .detail-newsletter-form input:focus {
+    border-color: var(--accent);
+  }
+  .detail-newsletter-form button {
+    all: unset;
+    cursor: pointer;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 10px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px var(--accent-glow);
+    transition: background 0.15s ease, transform 0.15s ease;
+    white-space: nowrap;
+  }
+  .detail-newsletter-form button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+  .detail-newsletter-msg {
+    display: none;
+    margin-top: 8px;
+    font-size: 0.84rem;
+    color: #16a34a;
+    font-weight: 600;
+  }
+  html[data-theme="dark"] .detail-newsletter-msg {
+    color: #a3e635;
+  }
+  .detail-newsletter-msg.error {
+    color: #ef4444;
+  }
+
   /* --- Adjacent Repository Mesh Navigation --- */
   .repo-nav {
     margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border-faint);
@@ -440,6 +523,8 @@
   @media (max-width: 600px) {
     .repo-nav { grid-template-columns: 1fr; }
     .repo-nav-next { text-align: left; }
+    .detail-newsletter-form { flex-direction: column; }
+    .detail-newsletter-form button { text-align: center; }
   }
 </style>
 </head>
@@ -553,6 +638,18 @@
         </div>
         
 
+        <section class="detail-newsletter-card" aria-label="Newsletter Signup">
+          <span class="detail-newsletter-kicker">⚡ WEEKLY CLI &amp; SELF-HOSTED DISPATCH · FREE</span>
+          <h2 class="detail-newsletter-title">Want open-source tools like httpie every week?</h2>
+          <p class="detail-newsletter-desc">Get 1-line install commands, architecture notes &amp; SaaS-replacement toolkits delivered to your inbox. Zero spam, 1-click unsubscribe.</p>
+          <form class="detail-newsletter-form" id="detailNewsletterForm">
+            <input type="text" name="hp" id="detailNewsletterHp" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <input type="email" id="detailNewsletterEmail" placeholder="your.email@company.com" required aria-label="Your email address" />
+            <button type="submit" id="detailNewsletterBtn">Get Weekly Drops →</button>
+          </form>
+          <div class="detail-newsletter-msg" id="detailNewsletterMsg"></div>
+        </section>
+
         <nav class="repo-nav" aria-label="Adjacent Repositories">
           <a class="repo-nav-card repo-nav-prev" href="../../../repos/schollz/croc/">
             <span class="repo-nav-label">← Previous Repo</span>
@@ -568,6 +665,51 @@
   </main>
 
   <script>
+    const NEWSLETTER_API = window.AW_NEWSLETTER_API || "https://weekendrepos-newsletter.berkayturanci.workers.dev/subscribe";
+    (function() {
+      const form = document.getElementById("detailNewsletterForm");
+      const emailInput = document.getElementById("detailNewsletterEmail");
+      const hpInput = document.getElementById("detailNewsletterHp");
+      const btn = document.getElementById("detailNewsletterBtn");
+      const msg = document.getElementById("detailNewsletterMsg");
+      if (!form || !emailInput || !btn || !msg) return;
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+        if (!email) return;
+        const hp = hpInput ? hpInput.value : "";
+        btn.disabled = true;
+        const origText = btn.textContent;
+        btn.textContent = "Subscribing…";
+        msg.style.display = "none";
+        msg.classList.remove("error");
+        try {
+          const resp = await fetch(NEWSLETTER_API, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, hp }),
+          });
+          const data = await resp.json().catch(() => ({}));
+          if (resp.ok && (data.success || resp.status === 200)) {
+            btn.textContent = data.alreadySubscribed ? "Subscribed" : "Subscribed!";
+            msg.textContent = data.alreadySubscribed
+              ? "You're already on the list!"
+              : (data.message || ("✓ Check your inbox to confirm (" + email + ")!"));
+            msg.style.display = "block";
+            if (!data.alreadySubscribed) emailInput.value = "";
+          } else {
+            throw new Error(data.error || "Could not complete subscription. Please try again.");
+          }
+        } catch (err) {
+          btn.disabled = false;
+          btn.textContent = origText;
+          msg.textContent = err.message || "Could not connect to subscription service. Please try again.";
+          msg.classList.add("error");
+          msg.style.display = "block";
+        }
+      });
+    })();
+
     const themeToggle = document.getElementById("themeToggle");
     function applyThemeMode(mode) {
       const systemIsLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
@@ -624,5 +766,6 @@
     }
     
   </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f9a978b9ccc64ff49460fbcee8f722ef"}'></script>
 </body>
 </html>
