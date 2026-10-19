@@ -2,9 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://berkayturanci.github.io/awesome-weekend-repos/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/spf13/cobra/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/charmbracelet/gum/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/YashjitPal/BetterGravity/</loc>
@@ -175,6 +187,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/usebruno/bruno/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/OpenBB-finance/OpenBB/</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -195,6 +213,48 @@
   <url>
     <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/duckdb/duckdb/</loc>
     <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/ast-grep/ast-grep/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/oomol-lab/open-connector/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/eza-community/eza/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/derailed/k9s/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/sxyazi/yazi/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/rtk-ai/rtk/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berkayturanci.github.io/awesome-weekend-repos/repos/yt-dlp/yt-dlp/</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
